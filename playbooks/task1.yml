@@ -1,0 +1,7 @@
+vars_prompt:
+  - name: hosts_prompt
+    prompt: Host or Hostgroup to run this Playbook
+    private: no
+  - name: test
+    prompt: User account to be Created
+    private: no

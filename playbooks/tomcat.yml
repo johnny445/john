@@ -1,0 +1,33 @@
+- hosts: all
+  gather_facts: no
+  become: yes
+  become_user: test
+  tasks:
+    - name: install java
+      package:
+        name: java
+        state: installed
+    - name: create /opt/tomcat directory
+      file:
+        path: /opt/tomcat
+        state: directory
+        mode: 0755
+    - name: Install Web Server
+      package:
+        name: tomcat
+        state: installed
+
+    - name: Start Web Server
+      service:
+        name: tomcat
+        state: started
+        enabled: yes
+    - name: Start tomcat 
+      command: nohup '/opt/tomcat/bin/startup.sh'
+    - name: Start and enable Tomcat service
+      systemd:
+        name: tomcat
+        state: started
+        enabled: true
+        daemon_reload: true
+
