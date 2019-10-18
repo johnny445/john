@@ -1,0 +1,9 @@
+- hosts: webservers
+  become: yes
+  tasks:
+  - name: add repository
+    yum_repository: 
+      name: epel-repo
+      description: EPEL YUM repo
+      baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+

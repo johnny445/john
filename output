@@ -1,0 +1,664 @@
+    1  su
+    2  exit
+    3  vi /etc/ansible/
+    4  cd /etc/ansible
+    5  ssh-keygen
+    6  ssh-copy-id test@10.142.0.3
+    7  ping slave
+    8  vi hosts 
+    9  ansible -m ping all
+   10  cd /opt/
+   11  lsa
+   12  ls
+   13  cd /etc/ansible/
+   14  lsa
+   15  ls
+   16  cd roles/
+   17  LS
+   18  cd ..
+   19  vi ansible.cfg 
+   20  mkdir playbooks
+   21  cd
+   22  mkdir playbooks
+   23  cd playbooks/
+   24  vi new.yml
+   25  ansible-playbook new.yml 
+   26  vi new.yml 
+   27  ls
+   28  cd ..
+   29  mv playbooks/new.yml /etc/ansible/
+   30  sudo mv playbooks/new.yml /etc/ansible/
+   31  cd /etc/ansible/
+   32  ls
+   33  sudo vi index.html
+   34  ansible-playbook new.yml 
+   35  ansible -m ping all
+   36  vi hosts
+   37  ls
+   38  sudo vi hosts
+   39  sudo vi new.yml 
+   40  ansible-playbook new.yml 
+   41  sudo vi new.yml 
+   42  ansible-playbook new.yml 
+   43  cd
+   44  pwd
+   45  ls
+   46  mv playbooks/ /etc/ansible/
+   47  sudo mv playbooks/ /etc/ansible/
+   48  cd /etc/ansible/
+   49  ls
+   50  mv new.yml /etc/ansible/playbooks/
+   51  sudo mv new.yml /etc/ansible/playbooks/
+   52  ls
+   53  cd playbooks/
+   54  ls
+   55  ansible-playbook new.yml 
+   56  fatal: [10.142.0.3]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "failed": true, "module_stderr": "Shared connection to 10.142.0.3 closed.\r\n", "module_stdout": ">>> /etc/sudoers: syntax error near line 101 <<<\r\nsudo: parse error in /etc/sudoers near line 101\r\nsudo: no valid sudoers sources found, quitting\r\nsudo: unable to initialize policy plugin\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: setup\n"}
+   57  vi new.yml 
+   58  ansible-playbook new.yml 
+   59  vi new.yml 
+   60  ansible-playbook new.yml 
+   61  vi /etc/ansible/ansible.cfg 
+   62  vi new.yml 
+   63  ls
+   64  cd ..
+   65  ls
+   66  vi /etc/sudoers
+   67  exit
+   68  cd /etc/ansible/playbooks/
+   69  cd ..
+   70  ansible -m ping all
+   71  ping 10.150.0.4
+   72  cd /etc/ssh/sshd_config 
+   73  vi /etc/ssh/sshd_config 
+   74  sudo vi /etc/ssh/sshd_config 
+   75  ansible -m ping all
+   76  service sshd restart
+   77  sudo vi /etc/ssh/sshd_config 
+   78  sudo service sshd restart
+   79  ansible -m ping all
+   80  cd ..
+   81  ls
+   82  vi hosts
+   83  sudo vi hosts
+   84  ssh-copy-id test@10.142.0.4
+   85  ansible -m ping all
+   86  cd
+   87  cd /etc/a
+   88  cd /etc/ansible/playbooks/
+   89  ls
+   90  ansible-playbook new.yml 
+   91  sudo ansible-playbook new.yml 
+   92  ansible-playbook new.yml 
+   93  vi new.yml 
+   94  ansible-playbook new.yml 
+   95  vi new.yml 
+   96  cd /etc/ansible/playbooks/
+   97  vi old.yml
+   98  sudo vi old.yml
+   99  vi ../ansible.cfg 
+  100  sudo vi ../ansible.cfg 
+  101  cd /etc/an
+  102  cd /etc/ansible/
+  103  sudo vi ansible.cfg 
+  104  vi hosts 
+  105  sudo vi hosts 
+  106  ansible -m ping all
+  107  ping localhost
+  108  cd playbooks/
+  109  ls
+  110  sudo vi old.yml
+  111  ansible-playbook old.yml 
+  112  cd /tmp/
+  113  ls
+  114  ll
+  115  cd /etc/ansible/
+  116  ansible -m ping all
+  117  ansible-playbook hosts 
+  118  cd playbooks/
+  119  ansible-playbook hello.yml 
+  120  vi hello.yml 
+  121  ansible-playbook hello.yml 
+  122  vi hello.yml 
+  123  ansible-doc -l 
+  124  cd /etc/ansible/
+  125  ls
+  126  ansible-doc -l |wc -l
+  127  ansible -m command -a ""hostname" all
+  128  ansible -m command -a "hostname" all
+  129  ansible -m command -a "date" all
+  130  ls
+  131  pwd
+  132  ansible -m command "df -h |grep run" 
+  133  ansible -m command "df -h |grep run"  all
+  134  ansible -m command "hostname"  all -u ec2-user -k webservers
+  135  ansible -m command "hostname"  all -u ec2-user -l -k webservers
+  136  vi hosts 
+  137  sudo vi hosts 
+  138  ansible -m command "hostname"  all -u test -l -k webservers
+  139  ansible -m command "hostname"  all -u ec2-user -l -k webservers
+  140  cd playbooks/
+  141  ansible-playbook -i inventory -k hello.yml
+  142  ansible-playbook -i inventory -k new.yml
+  143  ansible-galaxy init system-demo
+  144  ls
+  145  cd system-demo/
+  146  ls
+  147  tree
+  148  yum install tree
+  149  sudo yum install tree
+  150  tree
+  151  cat tasks/main.yml
+  152  cat vars/main.yml
+  153  cd ..
+  154  vi demo.yml
+  155  ansible-playbook demo.yml 
+  156  cd system-demo/
+  157  tree
+  158  sh run | i name
+  159  cd /etc/resolv.conf 
+  160  sudo vi /etc/resolv.conf 
+  161  cd /etc/ansible/
+  162  sudo ansible -m domain_name "ansible" local -b
+  163  ansible-doc -l |grep domain
+  164  m update
+  165  yum update
+  166  sudo yum update
+  167  cd /etc/ansible/
+  168  ansible -m ping all
+  169  cd /etc/ansible/
+  170  vi ansible.cfg 
+  171  cd playbooks/
+  172  ls
+  173  vi world.yml
+  174  sudo vi world.yml
+  175  ansible-playbook world.yml 
+  176  sudo vi world.yml
+  177  ansible-playbook world.yml 
+  178  sudo vi world.yml
+  179  ansible-playbook world.yml 
+  180  cd ..
+  181  vi hosts 
+  182  sudo vi hos`
+  183  sudo vi hosts 
+  184  history
+  185  cd playbooks/
+  186  sudo vi package.yml
+  187  ansible-playbook package.yml 
+  188  sudo vi package.yml
+  189  ansible-playbook package.yml 
+  190  sudo vi package.yml
+  191  ansible-playbook package.yml 
+  192  sudo vi ../hosts 
+  193  ansible-playbook package.yml 
+  194  sudo vi ../hosts 
+  195  sudo vi package.yml
+  196  ansible-playbook package.yml 
+  197  sudo vi package.yml
+  198  ansible-playbook package.yml 
+  199  sudo vi package.yml
+  200  ansible-playbook package.yml 
+  201  sudo vi package.yml
+  202  ansible-playbook package.yml 
+  203  sudo vi package.yml
+  204  ansible-playbook package.yml 
+  205  sudo vi package.yml
+  206  cd /etc/ansible/playbooks/
+  207  ls
+  208  vi package.yml 
+  209  cd /etc/ansible/playbooks/
+  210  vi package.yml 
+  211  sudo vi package.yml
+  212  ansible-playbook package.yml 
+  213  sudo vi gcc.yml
+  214  ansible-playbook gcc.yml 
+  215  su - test
+  216  clear
+  217  cd /root/
+  218  ls
+  219  ll
+  220  ls -lart
+  221  cd .ssh/
+  222  ls
+  223  ls -lart
+  224  ls
+  225  ls -lart
+  226  cd
+  227  cd /etc/ansible/playbooks/
+  228  ls
+  229  vi nginx.yml
+  230  cat nginx.yml 
+  231  ansible-playbook nginx.yml 
+  232  ansible-playbook nginx.yml -v
+  233  ansible-playbook nginx.yml -vv
+  234  ansible-playbook nginx.yml -vvv
+  235  ansible-playbook nginx.yml 
+  236  vi nginx.yml
+  237  vi vars.yml
+  238  ansible-playbook vars.yml 
+  239  vi vars.yml
+  240  ansible-playbook vars.yml 
+  241  vi vars.yml
+  242  ansible-playbook vars.yml 
+  243  vi user.yml
+  244  ansible-playbook user.yml 
+  245  vi hostname.yml
+  246  ansible-playbook hostname.yml 
+  247  vi tomcat.yml
+  248  ansible-playbook tomcat.yml 
+  249  vi tomcat.yml
+  250  ansible-playbook tomcat.yml 
+  251  vi tomcat.yml
+  252  ansible-playbook tomcat.yml 
+  253  vi tomcat.yml
+  254  ansible-playbook tomcat.yml 
+  255  vi tomcat.yml
+  256  ansible-playbook tomcat.yml 
+  257  vi tomcat.yml
+  258  ansible-playbook tomcat.yml 
+  259  vi tomcat.yml
+  260  ansible-playbook tomcat.yml 
+  261  vi tomcat.yml
+  262  ansible-playbook tomcat.yml 
+  263  vi tomcat.yml
+  264  ansible-playbook tomcat.yml 
+  265  vi tomcat.yml
+  266  ansible-playbook tomcat.yml 
+  267  vi tomcat.yml
+  268  ansible-playbook tomcat.yml 
+  269  vi apache.yml
+  270  ansible-playbook apache.yml 
+  271  vi apache.yml
+  272  ansible-playbook apache.yml  --check
+  273  vi apache.yml
+  274  ansible-playbook apache.yml 
+  275  vi apache.yml
+  276  ansible-playbook apache.yml 
+  277  vi apache.yml
+  278  ansible-playbook apache.yml 
+  279  vi apache.yml
+  280  ansible-playbook apache.yml 
+  281  vi apache.yml
+  282  ansible-playbook apache.yml 
+  283  vi apache.yml
+  284  ansible-playbook apache.yml 
+  285  vi apache.yml
+  286  ansible-playbook apache.yml 
+  287  vi apache.yml
+  288  ansible-playbook apache.yml 
+  289  vi apache.yml
+  290  ansible-playbook apache.yml 
+  291  vi apache.yml
+  292  ansible-playbook apache.yml 
+  293  vi apache.yml
+  294  ansible-playbook apache.yml 
+  295  vi apache.yml
+  296  ansible-playbook apache.yml 
+  297  vi apache.yml
+  298  ansible-playbook apache.yml 
+  299  find / -name tomcat.service
+  300  ansible-playbook apache.yml 
+  301  vi apache.yml
+  302  ansible-playbook apache.yml 
+  303  vi apache.yml
+  304  ansible-playbook apache.yml 
+  305  vi apache.yml
+  306  ansible-playbook apache.yml 
+  307  cd /etc/ansible/playbooks/
+  308  ls
+  309  mkdir files
+  310  cd files/
+  311  mkdir tomcat.service
+  312  cd ..
+  313  ..
+  314  ls
+  315  pwd
+  316  vi apache.yml `
+  317  vi apache.yml 
+  318  ansible-playbook apache.yml 
+  319  vi apache.yml 
+  320  ansible-playbook apache.yml 
+  321  vi apache.yml 
+  322  ansible-playbook apache.yml 
+  323  vi apache.yml 
+  324  ansible-playbook apache.yml 
+  325  vi apache.yml 
+  326  ansible-playbook apache.yml 
+  327  cd /etc/ansible/playbooks/
+  328  ls
+  329  vi apache.yml 
+  330  ansible-playbook apache.yml 
+  331  vi apache.yml 
+  332  ansible-playbook apache.yml 
+  333  vi apache.yml 
+  334  ansible-playbook apache.yml 
+  335  vi apache.yml 
+  336  ansible-playbook apache.yml 
+  337  cd /etc/ansible/ansible.cfg 
+  338  vi /etc/ansible/ansible.cfg 
+  339  cd /etc/ansible/playbooks/
+  340  more apache.yml 
+  341  vi task1.yml
+  342  ansible-playbook task1.yml 
+  343  vi task1.yml
+  344  ansible-playbook task1.yml 
+  345  vi task1.yml
+  346  ansible-playbook task1.yml 
+  347  vi task1.yml
+  348  ansible-playbook task1.yml 
+  349  vi task1.yml
+  350  ansible-playbook task1.yml 
+  351  wq!
+  352  vi task1.yml
+  353  wq!
+  354  ansible-playbook task1.yml 
+  355  vi task1.yml
+  356  vi task2.yml 
+  357  ansible-playbook task2.yml 
+  358  vi task2.yml 
+  359  ansible-playbook task2.yml 
+  360  vi task2.yml 
+  361  ansible-playbook task2.yml 
+  362  vi task2.yml 
+  363  ansible-playbook task2.yml 
+  364  vi task2.yml 
+  365  ansible-playbook task2.yml 
+  366  ansible-playbook task2.yml --check
+  367  ansible-playbook task2.yml -syntax-check
+  368  ansible-playbook task2.yml --syntax-check
+  369  vi task2.yml 
+  370  ansible-playbook task2.yml 
+  371  vi task2.yml 
+  372  ansible-playbook task2.yml 
+  373  vi task2.yml 
+  374  ansible-playbook task2.yml 
+  375  vi task3.yml
+  376  ansible-playbook task3.yml 
+  377  vi task3.yml
+  378  ansible-playbook task3.yml 
+  379  vi task3.yml
+  380  ansible-playbook task3.yml 
+  381  vi task3.yml
+  382  ansible-playbook task3.yml 
+  383  vi task4.yml
+  384  ansible-playbook task4.yml 
+  385  vi task5.yml
+  386  ansible-playbook task5.yml 
+  387  vi task6.yml
+  388  ansible-playbook task6.yml 
+  389  vi task6.yml
+  390  ansible-playbook task6.yml 
+  391  sudo yum install git
+  392  mkdir ansible
+  393  cd ansible/
+  394  git clone https://github.com/johnny445/john.git
+  395  cd /etc/ansible/
+  396  git add playbooks
+  397  cd playbooks/
+  398  git add apache.yml 
+  399  git init
+  400  cd ..
+  401  git add playbooks
+  402  git init
+  403  cd playbooks/
+  404  ls
+  405  cd files/
+  406  ls
+  407  cd ..
+  408  cd
+  409  ls
+  410  ls -lart
+  411  git init
+  412  git add /etc/ansible/playbooks/
+  413  cd ansible/
+  414  git add /etc/ansible/playbooks/
+  415  git init
+  416  git clone https://github.com/johnny445/john.git
+  417  git add playbooks
+  418  git add /etc/ansible/playbooks
+  419  git add /etc/ansibcdle/playbooks
+  420  cd
+  421  cd /etc/ansible/
+  422  cd
+  423  cd ansible/
+  424  pwd
+  425  cd
+  426  cd /etc/ansible/
+  427  git push -u origin master
+  428  cd
+  429  ls 
+  430  ll
+  431  ls -lart
+  432  git clone https://github.com/johnny445/john.git
+  433  ls
+  434  cd john/
+  435  ls
+  436  cd
+  437  cd /etc/ansible/
+  438  mv playbooks /home/test/john/
+  439  sudo mv playbooks /home/test/john/
+  440  cd
+  441  cd john/
+  442  ls
+  443  git commit -am "playbooks"
+  444  git config --global user.email "johnnyvirus445@gmail.com"
+  445  you@example.com"
+  446    git config --global user.name 
+  447  you@example.com"
+  448  git config --global user.name "Your Name"
+  449  git config --global user.name "johnny445"
+  450  git commit -am "playbooks"
+  451  git add playbooks
+  452  git commit -m "playbooks"
+  453  git push -u origin master
+  454  cd
+  455  df -h
+  456  cd /etc/ansible/pl
+  457  cd john/playbooks/
+  458  cd ..
+  459  sudo mv playbooks /etc/ansible/
+  460  cd /etc/ansible/playbooks/
+  461  ls
+  462  vi task1.yml 
+  463  ansible-playbook task1.yml 
+  464  vi task7.yml
+  465  ansible-playbook task7.yml 
+  466  vi task7.yml
+  467  ansible-playbook task7.yml 
+  468  vi task7.yml
+  469  ansible-playbook task7.yml 
+  470  vi task7.yml
+  471  ansible-playbook task7.yml 
+  472  vi task8.yml
+  473  ansible-playbook task8.yml 
+  474  vi task9.yml
+  475  ansible-playbook task9.yml 
+  476  vi task9.yml
+  477  cd ..
+  478  ls
+  479  cd /etc/ansible/servecd playbooks/
+  480  cd playbooks/
+  481  ls
+  482  find / -name server_configs
+  483  vi task9.yml
+  484  ansible-playbook task9.yml 
+  485  vi task9.yml
+  486  ansible-playbook task9.yml 
+  487  vi task10.yml
+  488  ansible-playbook tas10.yml 
+  489  ansible-playbook task10.yml 
+  490  ansible-playbook tas10.yml 
+  491  vi task10.yml
+  492  ansible-playbook task10.yml 
+  493  vi task10.yml
+  494  ansible-playbook task10.yml 
+  495  vi task10.yml
+  496  ansible-playbook task10.yml 
+  497  ls
+  498  vi task11.yml
+  499  ansible-playbook task11.yml 
+  500  vi task11.yml
+  501  ansible-playbook task11.yml 
+  502  vi task11.yml
+  503  ansible-playbook task11.yml 
+  504  vi task11.yml]
+  505  ansible-playbook task11.yml 
+  506  vi task11.yml
+  507  ansible-playbook task11.yml 
+  508  LS
+  509  ls
+  510  cat task4.yml 
+  511  cat task5.yml
+  512  cat task6.yml
+  513  cd /etc/ansible/playbooks/
+  514  ls
+  515  vi task12.yml
+  516  vi /etc/ansible/hosts 
+  517  vi /etc/ansible/
+  518  cd /etc/ansible/
+  519  ls
+  520  vi ansible.cfg 
+  521  cd playbooks/
+  522  ls
+  523  vi task12.yml
+  524  ansible -m command -a "hostname" all
+  525  ansible -m command -a "date" all
+  526  ansible -m command -a "df -h" all
+  527  ansible-doc -l | grep hostname
+  528  ansible-doc -l 
+  529    
+  530  gkladjga
+  531  ansible-doc -l |grep command
+  532  ansible-doc -l |grep shell
+  533  cd pl
+  534  cd /etc/ansible/playbooks/
+  535  ls
+  536  vi task12.yml 
+  537  ansible-playbook task12.yml 
+  538  vi task12.yml 
+  539  ansible-playbook task12.yml 
+  540  vi task12.yml 
+  541  ansible-playbook task12.yml 
+  542  vi task12.yml 
+  543  ansible-playbook task12.yml 
+  544  vi task12.yml 
+  545  groups
+  546  group health chechk
+  547  group health check
+  548  group ansible
+  549  groupadd healthcheck
+  550  sudo groupadd healthcheck
+  551  vi task12.yml 
+  552  ansible-playbook task12.yml 
+  553  groups
+  554  cd /etc/group
+  555  cd /etc/groups
+  556  cd /etc/
+  557  ls
+  558  vi group
+  559  cd ansible/playbooks/
+  560  ls
+  561  vi task12.yml 
+  562  ansible-playbook task12.yml 
+  563  cd /etc/
+  564  sudo groupadd ansible
+  565  sudo groupadd backup
+  566  cd ansible/playbooks/
+  567  vi task12.yml 
+  568  ansible-playbook task12.yml 
+  569  cd /etc/
+  570  chown -R ansible healthcheck backup
+  571  chown -R test:test  ansible healthcheck backup
+  572  groupmod 644 ansible
+  573  sudo groupmod 777 ansible
+  574  sudo groupmod 644 ansible
+  575  sudo groupmod 644 backup
+  576  sudo groupmod -g 644 backup
+  577  sudo groupmod -g 644 ansible
+  578  sudo groupmod -g 5055 644 ansible
+  579  cd ansible/playbooks/
+  580  ls
+  581  vi task13.yml
+  582  ansible-playbook task13.yml 
+  583  ansible-playbook task12.yml 
+  584  ansible-playbook task13.yml 
+  585  cat task13.yml 
+  586  vi task14.yml
+  587  ansible-playbook task14.yml 
+  588  vi task14.yml
+  589  ansible-playbook task14.yml 
+  590  vi task14.yml
+  591  ansible-playbook task14.yml 
+  592  vi task14.yml
+  593  ansible-playbook task14.yml 
+  594  vi task14.yml
+  595  sudo yum update
+  596  cd /etc/ansible/playbooks/
+  597  ls
+  598  vi volume.yml
+  599  ansible -m ping all
+  600  cd /etc/ansible/playbooks/
+  601  vi volume.yml 
+  602  ansible-playbook volume.yml 
+  603  vi volume.yml 
+  604  ansible-playbook volume.yml 
+  605  cd
+  606  cat /etc/passwd
+  607  cd /etc/ansible/playbooks/
+  608  vi volume.yml 
+  609  ansible-playbook volume.yml 
+  610  vi volume.yml 
+  611  ansible-playbook volume.yml 
+  612  vi volume.yml 
+  613  ansible-playbook volume.yml 
+  614  vi volume.yml 
+  615  ansible-playbook volume.yml 
+  616  vi volume.yml 
+  617  ansible-playbook volume.yml 
+  618  vi volume.yml 
+  619  ansible-playbook volume.yml --syntax -check
+  620  vim volume.yml 
+  621  ansible-playbook volume.yml --syntax -check
+  622  vim volume.yml 
+  623  ansible-playbook volume.yml --syntax -check
+  624  ansible-playbook volume.yml --syntax-check
+  625  vim volume.yml 
+  626  ansible-playbook volume.yml --syntax-check
+  627  cd /usr/bin/ansible
+  628  vi /usr/bin/ansible
+  629  cd /etc/ansible/playbooks/
+  630  vi gather_facts.yml
+  631  ansible-playbook gather_facts.yml 
+  632  vi gather_facts.yml
+  633  ansible-playbook gather_facts.yml 
+  634  ansible-playbook gather_facts.yml --check
+  635  ansible-playbook gather_facts.yml 
+  636  vi gather_facts.yml
+  637  vi vars.yml
+  638  ansible-playbook vars.yml 
+  639  vi vars.yml
+  640  ansible-playbook vars.yml 
+  641  vi vars_prompt.yml
+  642  ansible-playbook vars_prompt.yml 
+  643  vi vars_file.yml
+  644  vi vars01.yml
+  645  ansible-playbook vars_file.yml 
+  646  vi register.yml
+  647  ansible-playbook register.yml 
+  648  vi register.yml
+  649  ansible-playbook register.yml 
+  650  vi register.yml
+  651  ansible-playbook register.yml 
+  652  ansible-playbook register.yml -v
+  653  ansible-playbook register.yml -vv
+  654  ansible-playbook register.yml -vvv
+  655  vi vars_prompt.yml 
+  656  vi vars_file.yml 
+  657  vi vars.yml 
+  658  vi register.yml 
+  659  ls
+  660  cat OUT
+  661  cat out
+  662  clear
+  663  history
+  664  history > output

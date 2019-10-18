@@ -1,0 +1,9 @@
+---
+- hosts: webservers
+  tasks:
+  - name: this will create my_dirs
+    command: mkdir /tmp/"{{ item }}"
+    with_items:
+    - new_dir1
+    - new_dir2
+    - new_dir3

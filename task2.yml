@@ -1,0 +1,9 @@
+- hosts: webservers
+  remote_user: test
+  become: yes
+  become_method: sudo
+  tasks: 
+  - name: Change SELinux mode to permissive
+    selinux:
+      policy: targeted
+      state: permissive

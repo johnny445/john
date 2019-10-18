@@ -1,0 +1,13 @@
+- hosts: webservers
+  remote_user: test
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Install downloaded RPM packages using YUM
+    yum:
+      name: rpm
+      state: present 
+      with_items:
+           - /home/ansible/httpd-2.4.6-88.el7.centos.x86_64.rpm
+           - /home/ansible/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm
+           - /home/ansible/httpd-manual-2.4.6-88.el7.centos.noarch.rpm

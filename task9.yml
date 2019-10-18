@@ -1,0 +1,13 @@
+- hosts: all
+  remote_user: test
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Template from source to Destination with ownership and permission
+    template:
+    backup: yes
+      src: /home/server_configs/templates/chrony.conf
+      dest: /etc/chrony.conf
+      owner: root
+      group: root
+      mode: 0644

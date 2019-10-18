@@ -1,0 +1,10 @@
+- hosts: webservers
+  remote_user: test
+  become: yes
+  become_method: sudo
+  tasks: 
+  - name: Enable and Start chrony Service persistently
+    service:
+      name: chrony 
+      state: start 
+      enabled: yes

@@ -1,0 +1,734 @@
+a10_server                                             Manage A10 Networks AX/SoftAX/Thunder/vThunder devices'...
+a10_server_axapi3                                      Manage A10 Networks AX/SoftAX/Thunder/vThunder devices 
+a10_service_group                                      Manage A10 Networks AX/SoftAX/Thunder/vThunder devices'...
+a10_virtual_server                                     Manage A10 Networks AX/SoftAX/Thunder/vThunder devices'...
+aci_aaa_user                                           Manage AAA users (aaa:User)                            
+aci_aaa_user_certificate                               Manage AAA user certificates (aaa:UserCert)            
+aci_access_port_block_to_access_port                   Manage port blocks of Fabric interface policy leaf prof...
+aci_access_port_to_interface_policy_leaf_profile       Manage Fabric interface policy leaf profile interface s...
+aci_access_sub_port_block_to_access_port               Manage sub port blocks of Fabric interface policy leaf ...
+aci_aep                                                Manage attachable Access Entity Profile (AEP) objects (...
+aci_aep_to_domain                                      Bind AEPs to Physical or Virtual Domains (infra:RsDomP)
+aci_ap                                                 Manage top level Application Profile (AP) objects (fv:A...
+aci_bd                                                 Manage Bridge Domains (BD) objects (fv:BD)             
+aci_bd_subnet                                          Manage Subnets (fv:Subnet)                             
+aci_bd_to_l3out                                        Bind Bridge Domain to L3 Out (fv:RsBDToOut)            
+aci_config_rollback                                    Provides rollback and rollback preview functionality (c...
+aci_config_snapshot                                    Manage Config Snapshots (config:Snapshot, config:Export...
+aci_contract                                           Manage contract resources (vz:BrCP)                    
+aci_contract_subject                                   Manage initial Contract Subjects (vz:Subj)             
+aci_contract_subject_to_filter                         Bind Contract Subjects to Filters (vz:RsSubjFiltAtt)   
+aci_domain                                             Manage physical, virtual, bridged, routed or FC domain ...
+aci_domain_to_encap_pool                               Bind Domain to Encap Pools (infra:RsVlanNs)            
+aci_domain_to_vlan_pool                                Bind Domain to VLAN Pools (infra:RsVlanNs)             
+aci_encap_pool                                         Manage encap pools (fvns:VlanInstP, fvns:VxlanInstP, fv...
+aci_encap_pool_range                                   Manage encap ranges assigned to pools (fvns:EncapBlk, f...
+aci_epg                                                Manage End Point Groups (EPG) objects (fv:AEPg)        
+aci_epg_monitoring_policy                              Manage monitoring policies (mon:EPGPol)                
+aci_epg_to_contract                                    Bind EPGs to Contracts (fv:RsCons, fv:RsProv)          
+aci_epg_to_domain                                      Bind EPGs to Domains (fv:RsDomAtt)                     
+aci_fabric_node                                        Manage Fabric Node Members (fabric:NodeIdentP)         
+aci_fabric_scheduler                                   This modules creates ACI schedulers                    
+aci_filter                                             Manages top level filter objects (vz:Filter)           
+aci_filter_entry                                       Manage filter entries (vz:Entry)                       
+aci_firmware_group                                     This module creates a firmware group                   
+aci_firmware_group_node                                This modules adds and remove nodes from the firmware gr...
+aci_firmware_policy                                    This creates a firmware policy                         
+aci_firmware_source                                    Manage firmware image sources (firmware:OSource)       
+aci_interface_policy_fc                                Manage Fibre Channel interface policies (fc:IfPol)     
+aci_interface_policy_l2                                Manage Layer 2 interface policies (l2:IfPol)           
+aci_interface_policy_leaf_policy_group                 Manage fabric interface policy leaf policy groups (infr...
+aci_interface_policy_leaf_profile                      Manage fabric interface policy leaf profiles (infra:Acc...
+aci_interface_policy_lldp                              Manage LLDP interface policies (lldp:IfPol)            
+aci_interface_policy_mcp                               Manage MCP interface policies (mcp:IfPol)              
+aci_interface_policy_ospf                              Manage OSPF interface policies (ospf:IfPol)            
+aci_interface_policy_port_channel                      Manage port channel interface policies (lacp:LagPol)   
+aci_interface_policy_port_security                     Manage port security (l2:PortSecurityPol)              
+aci_interface_selector_to_switch_policy_leaf_profile   Bind interface selector profiles to switch policy leaf ...
+aci_l3out                                              Manage Layer 3 Outside (L3Out) objects (l3ext:Out)     
+aci_l3out_route_tag_policy                             Manage route tag policies (l3ext:RouteTagPol)          
+aci_maintenance_group                                  This creates an ACI maintenance group                  
+aci_maintenance_group_node                             Manage maintenance group nodes                         
+aci_maintenance_policy                                 Manage firmware maintenance policies                   
+aci_rest                                               Direct access to the Cisco APIC REST API               
+aci_static_binding_to_epg                              Bind static paths to EPGs (fv:RsPathAtt)               
+aci_switch_leaf_selector                               Bind leaf selectors to switch policy leaf profiles (inf...
+aci_switch_policy_leaf_profile                         Manage switch policy leaf profiles (infra:NodeP)       
+aci_switch_policy_vpc_protection_group                 Manage switch policy explicit vPC protection groups (fa...
+aci_taboo_contract                                     Manage taboo contracts (vz:BrCP)                       
+aci_tenant                                             Manage tenants (fv:Tenant)                             
+aci_tenant_action_rule_profile                         Manage action rule profiles (rtctrl:AttrP)             
+aci_tenant_ep_retention_policy                         Manage End Point (EP) retention protocol policies (fv:E...
+aci_tenant_span_dst_group                              Manage SPAN destination groups (span:DestGrp)          
+aci_tenant_span_src_group                              Manage SPAN source groups (span:SrcGrp)                
+aci_tenant_span_src_group_to_dst_group                 Bind SPAN source groups to destination groups (span:Spa...
+aci_vlan_pool                                          Manage VLAN pools (fvns:VlanInstP)                     
+aci_vlan_pool_encap_block                              Manage encap blocks assigned to VLAN pools (fvns:EncapB...
+aci_vrf                                                Manage contexts or VRFs (fv:Ctx)                       
+acl                                                    Set and retrieve file ACL information                  
+acme_account                                           Create, modify or delete ACME accounts                 
+acme_account_info                                      Retrieves information on ACME accounts                 
+acme_certificate                                       Create SSL/TLS certificates with the ACME protocol     
+acme_certificate_revoke                                Revoke certificates with the ACME protocol             
+acme_challenge_cert_helper                             Prepare certificates required for ACME challenges such ...
+acme_inspect                                           Send direct requests to an ACME server                 
+add_host                                               Add a host (and alternatively a group) to the ansible-p...
+aerospike_migrations                                   Check or wait for migrations between nodes             
+airbrake_deployment                                    Notify airbrake about app deployments                  
+aireos_command                                         Run commands on remote devices running Cisco WLC       
+aireos_config                                          Manage Cisco WLC configurations                        
+aix_devices                                            Manages AIX devices                                    
+aix_filesystem                                         Configure LVM and NFS file systems for AIX             
+aix_inittab                                            Manages the inittab on AIX                             
+aix_lvg                                                Manage LVM volume groups on AIX                        
+aix_lvol                                               Configure AIX LVM logical volumes                      
+ali_instance                                           Create, Start, Stop, Restart or Terminate an Instance i...
+ali_instance_facts                                     Gather facts on instances of Alibaba Cloud ECS         
+alternatives                                           Manages alternative programs for common commands       
+aos_asn_pool                                           Manage AOS ASN Pool                                    
+aos_blueprint                                          Manage AOS blueprint instance                          
+aos_blueprint_param                                    Manage AOS blueprint parameter values                  
+aos_blueprint_virtnet                                  Manage AOS blueprint parameter values                  
+aos_device                                             Manage Devices on AOS Server                           
+aos_external_router                                    Manage AOS External Router                             
+aos_ip_pool                                            Manage AOS IP Pool                                     
+aos_logical_device                                     Manage AOS Logical Device                              
+aos_logical_device_map                                 Manage AOS Logical Device Map                          
+aos_login                                              Login to AOS server for session token                  
+aos_rack_type                                          Manage AOS Rack Type                                   
+aos_template                                           Manage AOS Template                                    
+apache2_mod_proxy                                      Set and/or get members' attributes of an Apache httpd 2...
+apache2_module                                         Enables/disables a module of the Apache2 webserver     
+apk                                                    Manages apk packages                                   
+apt                                                    Manages apt-packages                                   
+apt_key                                                Add or remove an apt key                               
+apt_repo                                               Manage APT repositories via apt-repo                   
+apt_repository                                         Add and remove APT repositories                        
+apt_rpm                                                apt_rpm package manager                                
+archive                                                Creates a compressed archive of one or more files or tr...
+aruba_command                                          Run commands on remote devices running Aruba Mobility C...
+aruba_config                                           Manage Aruba configuration sections                    
+asa_acl                                                Manage access-lists on a Cisco ASA                     
+asa_command                                            Run arbitrary commands on Cisco ASA devices            
+asa_config                                             Manage configuration sections on Cisco ASA devices     
+asa_og                                                 Manage object groups on a Cisco ASA                    
+assemble                                               Assemble configuration files from fragments            
+assert                                                 Asserts given expressions are true                     
+async_status                                           Obtain status of asynchronous task                     
+at                                                     Schedule the execution of a command or script file via ...
+atomic_container                                       Manage the containers on the atomic host platform      
+atomic_host                                            Manage the atomic host platform                        
+atomic_image                                           Manage the container images on the atomic host platform
+authorized_key                                         Adds or removes an SSH authorized key                  
+avi_actiongroupconfig                                  Module for setup of ActionGroupConfig Avi RESTful Objec...
+avi_alertconfig                                        Module for setup of AlertConfig Avi RESTful Object     
+avi_alertemailconfig                                   Module for setup of AlertEmailConfig Avi RESTful Object
+avi_alertscriptconfig                                  Module for setup of AlertScriptConfig Avi RESTful Objec...
+avi_alertsyslogconfig                                  Module for setup of AlertSyslogConfig Avi RESTful Objec...
+avi_analyticsprofile                                   Module for setup of AnalyticsProfile Avi RESTful Object
+avi_api_session                                        Avi API Module                                         
+avi_api_version                                        Avi API Version Module                                 
+avi_applicationpersistenceprofile                      Module for setup of ApplicationPersistenceProfile Avi R...
+avi_applicationprofile                                 Module for setup of ApplicationProfile Avi RESTful Obje...
+avi_authprofile                                        Module for setup of AuthProfile Avi RESTful Object     
+avi_autoscalelaunchconfig                              Module for setup of AutoScaleLaunchConfig Avi RESTful O...
+avi_backup                                             Module for setup of Backup Avi RESTful Object          
+avi_backupconfiguration                                Module for setup of BackupConfiguration Avi RESTful Obj...
+avi_certificatemanagementprofile                       Module for setup of CertificateManagementProfile Avi RE...
+avi_cloud                                              Module for setup of Cloud Avi RESTful Object           
+avi_cloudconnectoruser                                 Module for setup of CloudConnectorUser Avi RESTful Obje...
+avi_cloudproperties                                    Module for setup of CloudProperties Avi RESTful Object 
+avi_cluster                                            Module for setup of Cluster Avi RESTful Object         
+avi_clusterclouddetails                                Module for setup of ClusterCloudDetails Avi RESTful Obj...
+avi_controllerproperties                               Module for setup of ControllerProperties Avi RESTful Ob...
+avi_customipamdnsprofile                               Module for setup of CustomIpamDnsProfile Avi RESTful Ob...
+avi_dnspolicy                                          Module for setup of DnsPolicy Avi RESTful Object       
+avi_errorpagebody                                      Module for setup of ErrorPageBody Avi RESTful Object   
+avi_errorpageprofile                                   Module for setup of ErrorPageProfile Avi RESTful Object
+avi_gslb                                               Module for setup of Gslb Avi RESTful Object            
+avi_gslbapplicationpersistenceprofile                  Module for setup of GslbApplicationPersistenceProfile A...
+avi_gslbgeodbprofile                                   Module for setup of GslbGeoDbProfile Avi RESTful Object
+avi_gslbhealthmonitor                                  Module for setup of GslbHealthMonitor Avi RESTful Objec...
+avi_gslbservice                                        Module for setup of GslbService Avi RESTful Object     
+avi_gslbservice_patch_member                           Avi API Module                                         
+avi_hardwaresecuritymodulegroup                        Module for setup of HardwareSecurityModuleGroup Avi RES...
+avi_healthmonitor                                      Module for setup of HealthMonitor Avi RESTful Object   
+avi_httppolicyset                                      Module for setup of HTTPPolicySet Avi RESTful Object   
+avi_ipaddrgroup                                        Module for setup of IpAddrGroup Avi RESTful Object     
+avi_ipamdnsproviderprofile                             Module for setup of IpamDnsProviderProfile Avi RESTful ...
+avi_l4policyset                                        Module for setup of L4PolicySet Avi RESTful Object     
+avi_microservicegroup                                  Module for setup of MicroServiceGroup Avi RESTful Objec...
+avi_network                                            Module for setup of Network Avi RESTful Object         
+avi_networkprofile                                     Module for setup of NetworkProfile Avi RESTful Object  
+avi_networksecuritypolicy                              Module for setup of NetworkSecurityPolicy Avi RESTful O...
+avi_pkiprofile                                         Module for setup of PKIProfile Avi RESTful Object      
+avi_pool                                               Module for setup of Pool Avi RESTful Object            
+avi_poolgroup                                          Module for setup of PoolGroup Avi RESTful Object       
+avi_poolgroupdeploymentpolicy                          Module for setup of PoolGroupDeploymentPolicy Avi RESTf...
+avi_prioritylabels                                     Module for setup of PriorityLabels Avi RESTful Object  
+avi_role                                               Module for setup of Role Avi RESTful Object            
+avi_scheduler                                          Module for setup of Scheduler Avi RESTful Object       
+avi_seproperties                                       Module for setup of SeProperties Avi RESTful Object    
+avi_serverautoscalepolicy                              Module for setup of ServerAutoScalePolicy Avi RESTful O...
+avi_serviceengine                                      Module for setup of ServiceEngine Avi RESTful Object   
+avi_serviceenginegroup                                 Module for setup of ServiceEngineGroup Avi RESTful Obje...
+avi_snmptrapprofile                                    Module for setup of SnmpTrapProfile Avi RESTful Object 
+avi_sslkeyandcertificate                               Module for setup of SSLKeyAndCertificate Avi RESTful Ob...
+avi_sslprofile                                         Module for setup of SSLProfile Avi RESTful Object      
+avi_stringgroup                                        Module for setup of StringGroup Avi RESTful Object     
+avi_systemconfiguration                                Module for setup of SystemConfiguration Avi RESTful Obj...
+avi_tenant                                             Module for setup of Tenant Avi RESTful Object          
+avi_trafficcloneprofile                                Module for setup of TrafficCloneProfile Avi RESTful Obj...
+avi_useraccount                                        Avi UserAccount Module                                 
+avi_useraccountprofile                                 Module for setup of UserAccountProfile Avi RESTful Obje...
+avi_virtualservice                                     Module for setup of VirtualService Avi RESTful Object  
+avi_vrfcontext                                         Module for setup of VrfContext Avi RESTful Object      
+avi_vsdatascriptset                                    Module for setup of VSDataScriptSet Avi RESTful Object 
+avi_vsvip                                              Module for setup of VsVip Avi RESTful Object           
+avi_wafpolicy                                          Module for setup of WafPolicy Avi RESTful Object       
+avi_wafprofile                                         Module for setup of WafProfile Avi RESTful Object      
+avi_webhook                                            Module for setup of Webhook Avi RESTful Object         
+awall                                                  Manage awall policies                                  
+aws_acm_facts                                          Retrieve certificate facts from AWS Certificate Manager...
+aws_api_gateway                                        Manage AWS API Gateway APIs                            
+aws_application_scaling_policy                         Manage Application Auto Scaling Scaling Policies       
+aws_az_facts                                           Gather facts about availability zones in AWS           
+aws_batch_compute_environment                          Manage AWS Batch Compute Environments                  
+aws_batch_job_definition                               Manage AWS Batch Job Definitions                       
+aws_batch_job_queue                                    Manage AWS Batch Job Queues                            
+aws_caller_facts                                       Get facts about the user and account being used to make...
+aws_codecommit                                         Manage repositories in AWS CodeCommit                  
+aws_config_aggregation_authorization                   Manage cross-account AWS Config authorizations         
+aws_config_aggregator                                  Manage AWS Config aggregations across multiple accounts
+aws_config_delivery_channel                            Manage AWS Config delivery channels                    
+aws_config_recorder                                    Manage AWS Config Recorders                            
+aws_config_rule                                        Manage AWS Config resources                            
+aws_direct_connect_connection                          Creates, deletes, modifies a DirectConnect connection  
+aws_direct_connect_gateway                             Manage AWS Direct Connect Gateway                      
+aws_direct_connect_link_aggregation_group              Manage Direct Connect LAG bundles                      
+aws_direct_connect_virtual_interface                   Manage Direct Connect virtual interfaces               
+aws_eks_cluster                                        Manage Elastic Kubernetes Service Clusters             
+aws_elasticbeanstalk_app                               create, update, and delete an elastic beanstalk applica...
+aws_glue_connection                                    Manage an AWS Glue connection                          
+aws_glue_job                                           Manage an AWS Glue job                                 
+aws_inspector_target                                   Create, Update and Delete Amazon Inspector Assessment T...
+aws_kms                                                Perform various KMS management tasks                   
+aws_kms_facts                                          Gather facts about AWS KMS keys                        
+aws_region_facts                                       Gather facts about AWS regions                         
+aws_s3                                                 manage objects in S3                                   
+aws_s3_bucket_facts                                    Lists S3 buckets in AWS                                
+aws_s3_cors                                            Manage CORS for S3 buckets in AWS                      
+aws_secret                                             Manage secrets stored in AWS Secrets Manager           
+aws_ses_identity                                       Manages SES email and domain identity                  
+aws_ses_identity_policy                                Manages SES sending authorization policies             
+aws_ses_rule_set                                       Manages SES inbound receipt rule sets                  
+aws_sgw_facts                                          Fetch AWS Storage Gateway facts                        
+aws_ssm_parameter_store                                Manage key-value pairs in aws parameter store          
+aws_waf_condition                                      create and delete WAF Conditions                       
+aws_waf_facts                                          Retrieve facts for WAF ACLs, Rule , Conditions and Filt...
+aws_waf_rule                                           create and delete WAF Rules                            
+aws_waf_web_acl                                        create and delete WAF Web ACLs                         
+azure_rm_acs                                           Manage an Azure Container Service Instance (ACS)       
+azure_rm_aks                                           Manage a managed Azure Container Service (AKS) Instance
+azure_rm_aks_facts                                     Get Azure Kubernetes Service facts                     
+azure_rm_aksversion_facts                              Get available kubernetes versions supported by Azure Ku...
+azure_rm_appgateway                                    Manage Application Gateway instance                    
+azure_rm_applicationsecuritygroup                      Manage Azure Application Security Group                
+azure_rm_applicationsecuritygroup_facts                Get Azure Application Security Group facts             
+azure_rm_appserviceplan                                Manage App Service Plan                                
+azure_rm_appserviceplan_facts                          Get azure app service plan facts                       
+azure_rm_autoscale                                     Manage Azure autoscale setting                         
+azure_rm_autoscale_facts                               Get Azure Auto Scale Setting facts                     
+azure_rm_availabilityset                               Manage Azure availability set                          
+azure_rm_availabilityset_facts                         Get availability set facts                             
+azure_rm_cdnendpoint                                   Manage a Azure CDN endpoint                            
+azure_rm_cdnendpoint_facts                             Get Azure CDN endpoint facts                           
+azure_rm_cdnprofile                                    Manage a Azure CDN profile                             
+azure_rm_cdnprofile_facts                              Get Azure CDN profile facts                            
+azure_rm_containerinstance                             Manage an Azure Container Instance                     
+azure_rm_containerinstance_facts                       Get Azure Container Instance facts                     
+azure_rm_containerregistry                             Manage an Azure Container Registry                     
+azure_rm_containerregistry_facts                       Get Azure Container Registry facts                     
+azure_rm_cosmosdbaccount                               Manage Azure Database Account instance                 
+azure_rm_cosmosdbaccount_facts                         Get Azure Cosmos DB Account facts                      
+azure_rm_deployment                                    Create or destroy Azure Resource Manager template deplo...
+azure_rm_deployment_facts                              Get Azure Deployment facts                             
+azure_rm_devtestlab                                    Manage Azure DevTest Lab instance                      
+azure_rm_devtestlab_facts                              Get Azure DevTest Lab facts                            
+azure_rm_devtestlabarmtemplate_facts                   Get Azure DevTest Lab ARM Template facts               
+azure_rm_devtestlabartifact_facts                      Get Azure DevTest Lab Artifact facts                   
+azure_rm_devtestlabartifactsource                      Manage Azure DevTest Labs Artifacts Source instance    
+azure_rm_devtestlabartifactsource_facts                Get Azure DevTest Lab Artifact Source facts            
+azure_rm_devtestlabcustomimage                         Manage Azure DevTest Lab Custom Image instance         
+azure_rm_devtestlabcustomimage_facts                   Get Azure DevTest Lab Custom Image facts               
+azure_rm_devtestlabenvironment                         Manage Azure DevTest Lab Environment instance          
+azure_rm_devtestlabenvironment_facts                   Get Azure Environment facts                            
+azure_rm_devtestlabpolicy                              Manage Azure Policy instance                           
+azure_rm_devtestlabpolicy_facts                        Get Azure DTL Policy facts                             
+azure_rm_devtestlabschedule                            Manage Azure DevTest Lab Schedule instance             
+azure_rm_devtestlabschedule_facts                      Get Azure Schedule facts                               
+azure_rm_devtestlabvirtualmachine                      Manage Azure DevTest Lab Virtual Machine instance      
+azure_rm_devtestlabvirtualmachine_facts                Get Azure DevTest Lab Virtual Machine facts            
+azure_rm_devtestlabvirtualnetwork                      Manage Azure DevTest Lab Virtual Network instance      
+azure_rm_devtestlabvirtualnetwork_facts                Get Azure DevTest Lab Virtual Network facts            
+azure_rm_dnsrecordset                                  Create, delete and update DNS record sets and records  
+azure_rm_dnsrecordset_facts                            Get DNS Record Set facts                               
+azure_rm_dnszone                                       Manage Azure DNS zones                                 
+azure_rm_dnszone_facts                                 Get DNS zone facts                                     
+azure_rm_functionapp                                   Manage Azure Function Apps                             
+azure_rm_functionapp_facts                             Get Azure Function App facts                           
+azure_rm_hdinsightcluster                              Manage Azure HDInsight Cluster instance                
+azure_rm_hdinsightcluster_facts                        Get Azure HDInsight Cluster facts                      
+azure_rm_image                                         Manage Azure image                                     
+azure_rm_image_facts                                   Get facts about azure custom images                    
+azure_rm_keyvault                                      Manage Key Vault instance                              
+azure_rm_keyvaultkey                                   Use Azure KeyVault keys                                
+azure_rm_keyvaultsecret                                Use Azure KeyVault Secrets                             
+azure_rm_loadbalancer                                  Manage Azure load balancers                            
+azure_rm_loadbalancer_facts                            Get load balancer facts                                
+azure_rm_loganalyticsworkspace                         Manage Azure Log Analytics workspaces                  
+azure_rm_loganalyticsworkspace_facts                   Get facts of Azure Log Analytics workspaces            
+azure_rm_manageddisk                                   Manage Azure Manage Disks                              
+azure_rm_manageddisk_facts                             Get managed disk facts                                 
+azure_rm_mariadbconfiguration                          Manage Configuration instance                          
+azure_rm_mariadbconfiguration_facts                    Get Azure MariaDB Configuration facts                  
+azure_rm_mariadbdatabase                               Manage MariaDB Database instance                       
+azure_rm_mariadbdatabase_facts                         Get Azure MariaDB Database facts                       
+azure_rm_mariadbfirewallrule                           Manage MariaDB firewall rule instance                  
+azure_rm_mariadbfirewallrule_facts                     Get Azure MariaDB Firewall Rule facts                  
+azure_rm_mariadbserver                                 Manage MariaDB Server instance                         
+azure_rm_mariadbserver_facts                           Get Azure MariaDB Server facts                         
+azure_rm_mysqlconfiguration                            Manage Configuration instance                          
+azure_rm_mysqlconfiguration_facts                      Get Azure MySQL Configuration facts                    
+azure_rm_mysqldatabase                                 Manage MySQL Database instance                         
+azure_rm_mysqldatabase_facts                           Get Azure MySQL Database facts                         
+azure_rm_mysqlfirewallrule                             Manage MySQL firewall rule instance                    
+azure_rm_mysqlfirewallrule_facts                       Get Azure MySQL Firewall Rule facts                    
+azure_rm_mysqlserver                                   Manage MySQL Server instance                           
+azure_rm_mysqlserver_facts                             Get Azure MySQL Server facts                           
+azure_rm_networkinterface                              Manage Azure network interfaces                        
+azure_rm_networkinterface_facts                        Get network interface facts                            
+azure_rm_postgresqlconfiguration                       Manage Azure PostgreSQL Configuration                  
+azure_rm_postgresqlconfiguration_facts                 Get Azure PostgreSQL Configuration facts               
+azure_rm_postgresqldatabase                            Manage PostgreSQL Database instance                    
+azure_rm_postgresqldatabase_facts                      Get Azure PostgreSQL Database facts                    
+azure_rm_postgresqlfirewallrule                        Manage PostgreSQL firewall rule instance               
+azure_rm_postgresqlfirewallrule_facts                  Get Azure PostgreSQL Firewall Rule facts               
+azure_rm_postgresqlserver                              Manage PostgreSQL Server instance                      
+azure_rm_postgresqlserver_facts                        Get Azure PostgreSQL Server facts                      
+azure_rm_publicipaddress                               Manage Azure Public IP Addresses                       
+azure_rm_publicipaddress_facts                         Get public IP facts                                    
+azure_rm_rediscache                                    Manage Azure Cache for Redis instance                  
+azure_rm_rediscache_facts                              Get Azure Cache for Redis instance facts               
+azure_rm_rediscachefirewallrule                        Manage Azure Cache for Redis Firewall rules            
+azure_rm_resource                                      Create any Azure resource                              
+azure_rm_resource_facts                                Generic facts of Azure resources                       
+azure_rm_resourcegroup                                 Manage Azure resource groups                           
+azure_rm_resourcegroup_facts                           Get resource group facts                               
+azure_rm_roleassignment                                Manage Azure Role Assignment                           
+azure_rm_roleassignment_facts                          Gets Azure Role Assignment facts                       
+azure_rm_roledefinition                                Manage Azure Role Definition                           
+azure_rm_roledefinition_facts                          Get Azure Role Definition facts                        
+azure_rm_route                                         Manage Azure route resource                            
+azure_rm_routetable                                    Manage Azure route table resource                      
+azure_rm_routetable_facts                              Get route table facts                                  
+azure_rm_securitygroup                                 Manage Azure network security groups                   
+azure_rm_securitygroup_facts                           Get security group facts                               
+azure_rm_servicebus                                    Manage Azure Service Bus                               
+azure_rm_servicebus_facts                              Get servicebus facts                                   
+azure_rm_servicebusqueue                               Manage Azure Service Bus queue                         
+azure_rm_servicebussaspolicy                           Manage Azure Service Bus SAS policy                    
+azure_rm_servicebustopic                               Manage Azure Service Bus                               
+azure_rm_servicebustopicsubscription                   Manage Azure Service Bus subscription                  
+azure_rm_sqldatabase                                   Manage SQL Database instance                           
+azure_rm_sqldatabase_facts                             Get Azure SQL Database facts                           
+azure_rm_sqlfirewallrule                               Manage Firewall Rule instance                          
+azure_rm_sqlfirewallrule_facts                         Get Azure SQL Firewall Rule facts                      
+azure_rm_sqlserver                                     Manage SQL Server instance                             
+azure_rm_sqlserver_facts                               Get SQL Server facts                                   
+azure_rm_storageaccount                                Manage Azure storage accounts                          
+azure_rm_storageaccount_facts                          Get storage account facts                              
+azure_rm_storageblob                                   Manage blob containers and blob objects                
+azure_rm_subnet                                        Manage Azure subnets                                   
+azure_rm_subnet_facts                                  Get Azure Subnet facts                                 
+azure_rm_trafficmanagerendpoint                        Manage Azure Traffic Manager endpoint                  
+azure_rm_trafficmanagerendpoint_facts                  Get Azure Traffic Manager endpoint facts               
+azure_rm_trafficmanagerprofile                         Manage Azure Traffic Manager profile                   
+azure_rm_trafficmanagerprofile_facts                   Get Azure Traffic Manager profile facts                
+azure_rm_virtualmachine                                Manage Azure virtual machines                          
+azure_rm_virtualmachine_facts                          Get virtual machine facts                              
+azure_rm_virtualmachineextension                       Managed Azure Virtual Machine extension                
+azure_rm_virtualmachineextension_facts                 Get Azure Virtual Machine Extension facts              
+azure_rm_virtualmachineimage_facts                     Get virtual machine image facts                        
+azure_rm_virtualmachinescaleset                        Manage Azure virtual machine scale sets                
+azure_rm_virtualmachinescaleset_facts                  Get Virtual Machine Scale Set facts                    
+azure_rm_virtualmachinescalesetextension               Managed Azure Virtual Machine Scale Set extension      
+azure_rm_virtualmachinescalesetextension_facts         Get Azure Virtual Machine Scale Set Extension facts    
+azure_rm_virtualmachinescalesetinstance                Get Azure Virtual Machine Scale Set Instance facts     
+azure_rm_virtualmachinescalesetinstance_facts          Get Azure Virtual Machine Scale Set Instance facts     
+azure_rm_virtualnetwork                                Manage Azure virtual networks                          
+azure_rm_virtualnetwork_facts                          Get virtual network facts                              
+azure_rm_virtualnetworkgateway                         Manage Azure virtual network gateways                  
+azure_rm_virtualnetworkpeering                         Manage Azure Virtual Network Peering                   
+azure_rm_virtualnetworkpeering_facts                   Get facts of Azure Virtual Network Peering             
+azure_rm_webapp                                        Manage Web App instance                                
+azure_rm_webapp_facts                                  Get azure web app facts                                
+azure_rm_webappslot                                    Manage Azure Web App slot                              
+bcf_switch                                             Create and remove a bcf switch                         
+beadm                                                  Manage ZFS boot environments on FreeBSD/Solaris/illumos...
+bearychat                                              Send BearyChat notifications                           
+bigip_apm_policy_fetch                                 Exports the APM policy or APM access profile from remot...
+bigip_apm_policy_import                                Manage BIG-IP APM policy or APM access profile imports 
+bigip_appsvcs_extension                                Manage application service deployments                 
+bigip_asm_policy                                       Manage BIG-IP ASM policies                             
+bigip_asm_policy_fetch                                 Exports the asm policy from remote nodes               
+bigip_asm_policy_import                                Manage BIG-IP ASM policy imports                       
+bigip_asm_policy_manage                                Manage BIG-IP ASM policies                             
+bigip_asm_policy_server_technology                     Manages Server Technology on ASM policy                
+bigip_asm_policy_signature_set                         Manages Signature Sets on ASM policy                   
+bigip_cli_alias                                        Manage CLI aliases on a BIG-IP                         
+bigip_cli_script                                       Manage CLI scripts on a BIG-IP                         
+bigip_command                                          Run TMSH and BASH commands on F5 devices               
+bigip_config                                           Manage BIG-IP configuration sections                   
+bigip_configsync_action                                Perform different actions related to config-sync       
+bigip_data_group                                       Manage data groups on a BIG-IP                         
+bigip_device_auth                                      Manage system authentication on a BIG-IP               
+bigip_device_auth_ldap                                 Manage LDAP device authentication settings on BIG-IP   
+bigip_device_connectivity                              Manages device IP configuration settings for HA on a BI...
+bigip_device_dns                                       Manage BIG-IP device DNS settings                      
+bigip_device_facts                                     Collect facts from F5 BIG-IP devices                   
+bigip_device_group                                     Manage device groups on a BIG-IP                       
+bigip_device_group_member                              Manages members in a device group                      
+bigip_device_ha_group                                  Manage HA group settings on a BIG-IP system            
+bigip_device_httpd                                     Manage HTTPD related settings on BIG-IP                
+bigip_device_license                                   Manage license installation and activation on BIG-IP de...
+bigip_device_ntp                                       Manage NTP servers on a BIG-IP                         
+bigip_device_sshd                                      Manage the SSHD settings of a BIG-IP                   
+bigip_device_syslog                                    Manage system-level syslog settings on BIG-IP          
+bigip_device_traffic_group                             Manages traffic groups on BIG-IP                       
+bigip_device_trust                                     Manage the trust relationships between BIG-IPs         
+bigip_dns_cache_resolver                               Manage DNS resolver cache configurations on BIG-IP     
+bigip_dns_nameserver                                   Manage LTM DNS nameservers on a BIG-IP                 
+bigip_dns_resolver                                     Manage DNS resolvers on a BIG-IP                       
+bigip_dns_zone                                         Manage DNS zones on BIG-IP                             
+bigip_facts                                            Collect facts from F5 BIG-IP devices                   
+bigip_file_copy                                        Manage files in datastores on a BIG-IP                 
+bigip_firewall_address_list                            Manage address lists on BIG-IP AFM                     
+bigip_firewall_dos_profile                             Manage AFM DoS profiles on a BIG-IP                    
+bigip_firewall_dos_vector                              Manage attack vector configuration in an AFM DoS profil...
+bigip_firewall_global_rules                            Manage AFM global rule settings on BIG-IP              
+bigip_firewall_policy                                  Manage AFM security firewall policies on a BIG-IP      
+bigip_firewall_port_list                               Manage port lists on BIG-IP AFM                        
+bigip_firewall_rule                                    Manage AFM Firewall rules                              
+bigip_firewall_rule_list                               Manage AFM security firewall policies on a BIG-IP      
+bigip_gtm_datacenter                                   Manage Datacenter configuration in BIG-IP              
+bigip_gtm_facts                                        Collect facts from F5 BIG-IP GTM devices               
+bigip_gtm_global                                       Manages global GTM settings                            
+bigip_gtm_monitor_bigip                                Manages F5 BIG-IP GTM BIG-IP monitors                  
+bigip_gtm_monitor_external                             Manages external GTM monitors on a BIG-IP              
+bigip_gtm_monitor_firepass                             Manages F5 BIG-IP GTM FirePass monitors                
+bigip_gtm_monitor_http                                 Manages F5 BIG-IP GTM http monitors                    
+bigip_gtm_monitor_https                                Manages F5 BIG-IP GTM https monitors                   
+bigip_gtm_monitor_tcp                                  Manages F5 BIG-IP GTM tcp monitors                     
+bigip_gtm_monitor_tcp_half_open                        Manages F5 BIG-IP GTM tcp half-open monitors           
+bigip_gtm_pool                                         Manages F5 BIG-IP GTM pools                            
+bigip_gtm_pool_member                                  Manage GTM pool member settings                        
+bigip_gtm_server                                       Manages F5 BIG-IP GTM servers                          
+bigip_gtm_topology_record                              Manages GTM Topology Records                           
+bigip_gtm_topology_region                              Manages GTM Topology Regions                           
+bigip_gtm_virtual_server                               Manages F5 BIG-IP GTM virtual servers                  
+bigip_gtm_wide_ip                                      Manages F5 BIG-IP GTM wide ip                          
+bigip_hostname                                         Manage the hostname of a BIG-IP                        
+bigip_iapp_service                                     Manages TCL iApp services on a BIG-IP                  
+bigip_iapp_template                                    Manages TCL iApp templates on a BIG-IP                 
+bigip_ike_peer                                         Manage IPSec IKE Peer configuration on BIG-IP          
+bigip_imish_config                                     Manage BIG-IP advanced routing configuration sections  
+bigip_ipsec_policy                                     Manage IPSec policies on a BIG-IP                      
+bigip_irule                                            Manage iRules across different modules on a BIG-IP     
+bigip_log_destination                                  Manages log destinations on a BIG-IP                   
+bigip_log_publisher                                    Manages log publishers on a BIG-IP                     
+bigip_lx_package                                       Manages Javascript LX packages on a BIG-IP             
+bigip_management_route                                 Manage system management routes on a BIG-IP            
+bigip_monitor_dns                                      Manage DNS monitors on a BIG-IP                        
+bigip_monitor_external                                 Manages external LTM monitors on a BIG-IP              
+bigip_monitor_gateway_icmp                             Manages F5 BIG-IP LTM gateway ICMP monitors            
+bigip_monitor_http                                     Manages F5 BIG-IP LTM http monitors                    
+bigip_monitor_https                                    Manages F5 BIG-IP LTM https monitors                   
+bigip_monitor_ldap                                     Manages BIG-IP LDAP monitors                           
+bigip_monitor_snmp_dca                                 Manages BIG-IP SNMP data collecting agent (DCA) monitor...
+bigip_monitor_tcp                                      Manages F5 BIG-IP LTM tcp monitors                     
+bigip_monitor_tcp_echo                                 Manages F5 BIG-IP LTM tcp echo monitors                
+bigip_monitor_tcp_half_open                            Manages F5 BIG-IP LTM tcp half-open monitors           
+bigip_monitor_udp                                      Manages F5 BIG-IP LTM udp monitors                     
+bigip_node                                             Manages F5 BIG-IP LTM nodes                            
+bigip_partition                                        Manage BIG-IP partitions                               
+bigip_password_policy                                  Manages the authentication password policy on a BIG-IP 
+bigip_policy                                           Manage general policy configuration on a BIG-IP        
+bigip_policy_rule                                      Manage LTM policy rules on a BIG-IP                    
+bigip_pool                                             Manages F5 BIG-IP LTM pools                            
+bigip_pool_member                                      Manages F5 BIG-IP LTM pool members                     
+bigip_profile_analytics                                Manage HTTP analytics profiles on a BIG-IP             
+bigip_profile_client_ssl                               Manages client SSL profiles on a BIG-IP                
+bigip_profile_dns                                      Manage DNS profiles on a BIG-IP                        
+bigip_profile_fastl4                                   Manages Fast L4 profiles                               
+bigip_profile_http                                     Manage HTTP profiles on a BIG-IP                       
+bigip_profile_http2                                    Manage HTTP2 profiles on a BIG-IP                      
+bigip_profile_http_compression                         Manage HTTP compression profiles on a BIG-IP           
+bigip_profile_oneconnect                               Manage OneConnect profiles on a BIG-IP                 
+bigip_profile_persistence_cookie                       Manage cookie persistence profiles on BIG-IP           
+bigip_profile_persistence_src_addr                     Manage source address persistence profiles             
+bigip_profile_server_ssl                               Manages server SSL profiles on a BIG-IP                
+bigip_profile_tcp                                      Manage TCP profiles on a BIG-IP                        
+bigip_profile_udp                                      Manage UDP profiles on a BIG-IP                        
+bigip_provision                                        Manage BIG-IP module provisioning                      
+bigip_qkview                                           Manage qkviews on the device                           
+bigip_remote_role                                      Manage remote roles on a BIG-IP                        
+bigip_remote_syslog                                    Manipulate remote syslog settings on a BIG-IP          
+bigip_routedomain                                      Manage route domains on a BIG-IP                       
+bigip_selfip                                           Manage Self-IPs on a BIG-IP system                     
+bigip_service_policy                                   Manages service policies on a BIG-IP                   
+bigip_smtp                                             Manages SMTP settings on the BIG-IP                    
+bigip_snat_pool                                        Manage SNAT pools on a BIG-IP                          
+bigip_snmp                                             Manipulate general SNMP settings on a BIG-IP           
+bigip_snmp_community                                   Manages SNMP communities on a BIG-IP                   
+bigip_snmp_trap                                        Manipulate SNMP trap information on a BIG-IP           
+bigip_software_image                                   Manage software images on a BIG-IP                     
+bigip_software_install                                 Install software images on a BIG-IP                    
+bigip_software_update                                  Manage the software update settings of a BIG-IP        
+bigip_ssl_certificate                                  Import/Delete certificates from BIG-IP                 
+bigip_ssl_key                                          Import/Delete SSL keys from BIG-IP                     
+bigip_ssl_ocsp                                         Manage OCSP configurations on BIG-IP                   
+bigip_static_route                                     Manipulate static routes on a BIG-IP                   
+bigip_sys_daemon_log_tmm                               Manage BIG-IP tmm daemon log settings                  
+bigip_sys_db                                           Manage BIG-IP system database variables                
+bigip_sys_global                                       Manage BIG-IP global settings                          
+bigip_timer_policy                                     Manage timer policies on a BIG-IP                      
+bigip_traffic_selector                                 Manage IPSec Traffic Selectors on BIG-IP               
+bigip_trunk                                            Manage trunks on a BIG-IP                              
+bigip_tunnel                                           Manage tunnels on a BIG-IP                             
+bigip_ucs                                              Manage upload, installation and removal of UCS files   
+bigip_ucs_fetch                                        Fetches a UCS file from remote nodes                   
+bigip_user                                             Manage user accounts and user attributes on a BIG-IP   
+bigip_vcmp_guest                                       Manages vCMP guests on a BIG-IP                        
+bigip_virtual_address                                  Manage LTM virtual addresses on a BIG-IP               
+bigip_virtual_server                                   Manage LTM virtual servers on a BIG-IP                 
+bigip_vlan                                             Manage VLANs on a BIG-IP system                        
+bigip_wait                                             Wait for a BIG-IP condition before continuing          
+bigiq_application_fasthttp                             Manages BIG-IQ FastHTTP applications                   
+bigiq_application_fastl4_tcp                           Manages BIG-IQ FastL4 TCP applications                 
+bigiq_application_fastl4_udp                           Manages BIG-IQ FastL4 UDP applications                 
+bigiq_application_http                                 Manages BIG-IQ HTTP applications                       
+bigiq_application_https_offload                        Manages BIG-IQ HTTPS offload applications              
+bigiq_application_https_waf                            Manages BIG-IQ HTTPS WAF applications                  
+bigiq_device_discovery                                 Manage BIG-IP devices through BIG-IQ                   
+bigiq_device_facts                                     Collect facts from F5 BIG-IQ devices                   
+bigiq_regkey_license                                   Manages licenses in a BIG-IQ registration key pool     
+bigiq_regkey_license_assignment                        Manage regkey license assignment on BIG-IPs from a BIG-...
+bigiq_regkey_pool                                      Manages registration key pools on BIG-IQ               
+bigiq_utility_license                                  Manage utility licenses on a BIG-IQ                    
+bigiq_utility_license_assignment                       Manage utility license assignment on BIG-IPs from a BIG...
+bigmon_chain                                           Create and remove a bigmon inline service chain        
+bigmon_policy                                          Create and remove a bigmon out-of-band policy          
+bigpanda                                               Notify BigPanda about deployments                      
+bitbucket_access_key                                   Manages Bitbucket repository access keys               
+bitbucket_pipeline_key_pair                            Manages Bitbucket pipeline SSH key pair                
+bitbucket_pipeline_known_host                          Manages Bitbucket pipeline known hosts                 
+bitbucket_pipeline_variable                            Manages Bitbucket pipeline variables                   
+blockinfile                                            Insert/update/remove a text block surrounded by marker ...
+bower                                                  Manage bower packages with bower                       
+bundler                                                Manage Ruby Gem dependencies with Bundler              
+bzr                                                    Deploy software (or files) from bzr branches           
+campfire                                               Send a message to Campfire                             
+capabilities                                           Manage Linux capabilities                              
+catapult                                               Send a sms / mms using the catapult bandwidth api      
+ce_aaa_server                                          Manages AAA server global configuration on HUAWEI Cloud...
+ce_aaa_server_host                                     Manages AAA server host configuration on HUAWEI CloudEn...
+ce_acl                                                 Manages base ACL configuration on HUAWEI CloudEngine sw...
+ce_acl_advance                                         Manages advanced ACL configuration on HUAWEI CloudEngin...
+ce_acl_interface                                       Manages applying ACLs to interfaces on HUAWEI CloudEngi...
+ce_bfd_global                                          Manages BFD global configuration on HUAWEI CloudEngine ...
+ce_bfd_session                                         Manages BFD session configuration on HUAWEI CloudEngine...
+ce_bfd_view                                            Manages BFD session view configuration on HUAWEI CloudE...
+ce_bgp                                                 Manages BGP configuration on HUAWEI CloudEngine switche...
+ce_bgp_af                                              Manages BGP Address-family configuration on HUAWEI Clou...
+ce_bgp_neighbor                                        Manages BGP peer configuration on HUAWEI CloudEngine sw...
+ce_bgp_neighbor_af                                     Manages BGP neighbor Address-family configuration on HU...
+ce_command                                             Run arbitrary command on HUAWEI CloudEngine devices    
+ce_config                                              Manage Huawei CloudEngine configuration sections       
+ce_dldp                                                Manages global DLDP configuration on HUAWEI CloudEngine...
+ce_dldp_interface                                      Manages interface DLDP configuration on HUAWEI CloudEng...
+ce_eth_trunk                                           Manages Eth-Trunk interfaces on HUAWEI CloudEngine swit...
+ce_evpn_bd_vni                                         Manages EVPN VXLAN Network Identifier (VNI) on HUAWEI C...
+ce_evpn_bgp                                            Manages BGP EVPN configuration on HUAWEI CloudEngine sw...
+ce_evpn_bgp_rr                                         Manages RR for the VXLAN Network on HUAWEI CloudEngine ...
+ce_evpn_global                                         Manages global configuration of EVPN on HUAWEI CloudEng...
+ce_facts                                               Gets facts about HUAWEI CloudEngine switches           
+ce_file_copy                                           Copy a file to a remote cloudengine device over SCP on ...
+ce_info_center_debug                                   Manages information center debug configuration on HUAWE...
+ce_info_center_global                                  Manages outputting logs on HUAWEI CloudEngine switches 
+ce_info_center_log                                     Manages information center log configuration on HUAWEI ...
+ce_info_center_trap                                    Manages information center trap configuration on HUAWEI...
+ce_interface                                           Manages physical attributes of interfaces on HUAWEI Clo...
+ce_interface_ospf                                      Manages configuration of an OSPF interface instanceon H...
+ce_ip_interface                                        Manages L3 attributes for IPv4 and IPv6 interfaces on H...
+ce_link_status                                         Get interface link status on HUAWEI CloudEngine switche...
+ce_mlag_config                                         Manages MLAG configuration on HUAWEI CloudEngine switch...
+ce_mlag_interface                                      Manages MLAG interfaces on HUAWEI CloudEngine switches 
+ce_mtu                                                 Manages MTU settings on HUAWEI CloudEngine switches    
+ce_netconf                                             Run an arbitrary netconf command on HUAWEI CloudEngine ...
+ce_netstream_aging                                     Manages timeout mode of NetStream on HUAWEI CloudEngine...
+ce_netstream_export                                    Manages netstream export on HUAWEI CloudEngine switches
+ce_netstream_global                                    Manages global parameters of NetStream on HUAWEI CloudE...
+ce_netstream_template                                  Manages NetStream template configuration on HUAWEI Clou...
+ce_ntp                                                 Manages core NTP configuration on HUAWEI CloudEngine sw...
+ce_ntp_auth                                            Manages NTP authentication configuration on HUAWEI Clou...
+ce_ospf                                                Manages configuration of an OSPF instance on HUAWEI Clo...
+ce_ospf_vrf                                            Manages configuration of an OSPF VPN instance on HUAWEI...
+ce_reboot                                              Reboot a HUAWEI CloudEngine switches                   
+ce_rollback                                            Set a checkpoint or rollback to a checkpoint on HUAWEI ...
+ce_sflow                                               Manages sFlow configuration on HUAWEI CloudEngine switc...
+ce_snmp_community                                      Manages SNMP community configuration on HUAWEI CloudEng...
+ce_snmp_contact                                        Manages SNMP contact configuration on HUAWEI CloudEngin...
+ce_snmp_location                                       Manages SNMP location configuration on HUAWEI CloudEngi...
+ce_snmp_target_host                                    Manages SNMP target host configuration on HUAWEI CloudE...
+ce_snmp_traps                                          Manages SNMP traps configuration on HUAWEI CloudEngine ...
+ce_snmp_user                                           Manages SNMP user configuration on HUAWEI CloudEngine s...
+ce_startup                                             Manages a system startup information on HUAWEI CloudEng...
+ce_static_route                                        Manages static route configuration on HUAWEI CloudEngin...
+ce_stp                                                 Manages STP configuration on HUAWEI CloudEngine switche...
+ce_switchport                                          Manages Layer 2 switchport interfaces on HUAWEI CloudEn...
+ce_vlan                                                Manages VLAN resources and attributes on Huawei CloudEn...
+ce_vrf                                                 Manages VPN instance on HUAWEI CloudEngine switches    
+ce_vrf_af                                              Manages VPN instance address family on HUAWEI CloudEngi...
+ce_vrf_interface                                       Manages interface specific VPN configuration on HUAWEI ...
+ce_vrrp                                                Manages VRRP interfaces on HUAWEI CloudEngine devices  
+ce_vxlan_arp                                           Manages ARP attributes of VXLAN on HUAWEI CloudEngine d...
+ce_vxlan_gateway                                       Manages gateway for the VXLAN network on HUAWEI CloudEn...
+ce_vxlan_global                                        Manages global attributes of VXLAN and bridge domain on...
+ce_vxlan_tunnel                                        Manages VXLAN tunnel configuration on HUAWEI CloudEngin...
+ce_vxlan_vap                                           Manages VXLAN virtual access point on HUAWEI CloudEngin...
+certificate_complete_chain                             Complete certificate chain given a set of untrusted and...
+checkpoint_access_layer_facts                          Get access layer facts on Check Point over Web Services...
+checkpoint_access_rule                                 Manages access rules on Checkpoint over Web Services AP...
+checkpoint_access_rule_facts                           Get access rules objects facts on Checkpoint over Web S...
+checkpoint_host                                        Manages host objects on Checkpoint over Web Services AP...
+checkpoint_host_facts                                  Get host objects facts on Checkpoint over Web Services ...
+checkpoint_object_facts                                Get object facts on Check Point over Web Services API  
+checkpoint_run_script                                  Run scripts on Checkpoint devices over Web Services API
+checkpoint_session                                     Manages session objects on Check Point over Web Service...
+checkpoint_task_facts                                  Get task objects facts on Checkpoint over Web Services ...
+circonus_annotation                                    create an annotation in circonus                       
+cisco_spark                                            Send a message to a Cisco Spark Room or Individual     
+clc_aa_policy                                          Create or Delete Anti Affinity Policies at CenturyLink ...
+clc_alert_policy                                       Create or Delete Alert Policies at CenturyLink Cloud   
+clc_blueprint_package                                  deploys a blue print package on a set of servers in Cen...
+clc_firewall_policy                                    Create/delete/update firewall policies                 
+clc_group                                              Create/delete Server Groups at Centurylink Cloud       
+clc_loadbalancer                                       Create, Delete shared loadbalancers in CenturyLink Clou...
+clc_modify_server                                      modify servers in CenturyLink Cloud                    
+clc_publicip                                           Add and Delete public ips on servers in CenturyLink Clo...
+clc_server                                             Create, Delete, Start and Stop servers in CenturyLink C...
+clc_server_snapshot                                    Create, Delete and Restore server snapshots in CenturyL...
+cli_command                                            Run a cli command on cli-based network devices         
+cli_config                                             Push text based configuration to network devices over n...
+cloud_init_data_facts                                  Retrieve facts of cloud-init                           
+cloudflare_dns                                         Manage Cloudflare DNS records                          
+cloudformation                                         Create or delete an AWS CloudFormation stack           
+cloudformation_facts                                   Obtain facts about an AWS CloudFormation stack         
+cloudformation_stack_set                               Manage groups of CloudFormation stacks                 
+cloudfront_distribution                                create, update and delete aws cloudfront distributions 
+cloudfront_facts                                       Obtain facts about an AWS CloudFront distribution      
+cloudfront_invalidation                                create invalidations for aws cloudfront distributions  
+cloudfront_origin_access_identity                      create, update and delete origin access identities for ...
+cloudscale_floating_ip                                 Manages floating IPs on the cloudscale.ch IaaS service 
+cloudscale_server                                      Manages servers on the cloudscale.ch IaaS service      
+cloudscale_server_group                                Manages server groups on the cloudscale.ch IaaS service
+cloudscale_volume                                      Manages volumes on the cloudscale.ch IaaS service      
+cloudtrail                                             manage CloudTrail create, delete, update               
+cloudwatchevent_rule                                   Manage CloudWatch Event rules and targets              
+cloudwatchlogs_log_group                               create or delete log_group in CloudWatchLogs           
+cloudwatchlogs_log_group_facts                         get facts about log_group in CloudWatchLogs            
+cnos_backup                                            Backup the current running or startup configuration to ...
+cnos_banner                                            Manage multiline banners on Lenovo CNOS devices        
+cnos_bgp                                               Manage BGP resources and attributes on devices running ...
+cnos_command                                           Run arbitrary commands on Lenovo CNOS devices          
+cnos_conditional_command                               Execute a single command based on condition on devices ...
+cnos_conditional_template                              Manage switch configuration using templates based on co...
+cnos_config                                            Manage Lenovo CNOS configuration sections              
+cnos_factory                                           Reset the switch startup configuration to default (fact...
+cnos_facts                                             Collect facts from remote devices running Lenovo CNOS  
+cnos_image                                             Perform firmware upgrade/download from a remote server ...
+cnos_interface                                         Manage Interface on Lenovo CNOS network devices        
+cnos_l2_interface                                      Manage Layer-2 interface on Lenovo CNOS devices        
+cnos_l3_interface                                      Manage Layer-3 interfaces on Lenovo CNOS network device...
+cnos_linkagg                                           Manage link aggregation groups on Lenovo CNOS devices  
+cnos_lldp                                              Manage LLDP configuration on Lenovo CNOS network device...
+cnos_logging                                           Manage logging on network devices                      
+cnos_reload                                            Perform switch restart on devices running Lenovo CNOS  
+cnos_rollback                                          Roll back the running or startup configuration from a r...
+cnos_save                                              Save the running configuration as the startup configura...
+cnos_showrun                                           Collect the current running configuration on devices ru...
+cnos_static_route                                      Manage static IP routes on Lenovo CNOS network devices 
+cnos_system                                            Manage the system attributes on Lenovo CNOS devices    
+cnos_template                                          Manage switch configuration using templates on devices ...
+cnos_user                                              Manage the collection of local users on Lenovo CNOS dev...
+cnos_vlag                                              Manage VLAG resources and attributes on devices running...
+cnos_vlan                                              Manage VLANs on CNOS network devices                   
+cnos_vrf                                               Manage VRFs on Lenovo CNOS network devices             
+cobbler_sync                                           Sync Cobbler                                           
+cobbler_system                                         Manage system objects in Cobbler                       
+command                                                Execute commands on targets                            
+composer                                               Dependency Manager for PHP                             
+consul                                                 Add, modify & delete services within a consul cluster. 
+consul_acl                                             Manipulate Consul ACL keys and rules                   
+consul_kv                                              Manipulate entries in the key/value store of a consul c...
+consul_session                                         Manipulate consul sessions                             
+copy                                                   Copy files to remote locations                         
+cpanm                                                  Manages Perl library dependencies                      
+cpm_plugconfig                                         Get and Set Plug Parameters on WTI OOB and PDU power de...
+cpm_plugcontrol                                        Get and Set Plug actions on WTI OOB and PDU power devic...
+cpm_user                                               Get various status and parameters from WTI OOB and PDU ...
+cron                                                   Manage cron.d and crontab entries                      
+cronvar                                                Manage variables in crontabs                           
+crypttab                                               Encrypted Linux block devices                          
+cs_account                                             Manages accounts on Apache CloudStack based clouds     
+cs_affinitygroup                                       Manages affinity groups on Apache CloudStack based clou...
+cs_cluster                                             Manages host clusters on Apache CloudStack based clouds
+cs_configuration                                       Manages configuration on Apache CloudStack based clouds
+cs_disk_offering                                       Manages disk offerings on Apache CloudStack based cloud...
+cs_domain                                              Manages domains on Apache CloudStack based clouds      
+cs_facts                                               Gather facts on instances of Apache CloudStack based cl...
+cs_firewall                                            Manages firewall rules on Apache CloudStack based cloud...
+cs_host                                                Manages hosts on Apache CloudStack based clouds        
+cs_image_store                                         Manages CloudStack Image Stores                        
+cs_instance                                            Manages instances and virtual machines on Apache CloudS...
+cs_instance_facts                                      Gathering facts from the API of instances from Apache C...
+cs_instance_nic                                        Manages NICs of an instance on Apache CloudStack based ...
+cs_instance_nic_secondaryip                            Manages secondary IPs of an instance on Apache CloudSta...
+cs_instance_password_reset                             Allows resetting VM the default passwords on Apache Clo...
+cs_instancegroup                                       Manages instance groups on Apache CloudStack based clou...
+cs_ip_address                                          Manages public IP address associations on Apache CloudS...
+cs_iso                                                 Manages ISO images on Apache CloudStack based clouds   
+cs_loadbalancer_rule                                   Manages load balancer rules on Apache CloudStack based ...
+cs_loadbalancer_rule_member                            Manages load balancer rule members on Apache CloudStack...
+cs_network                                             Manages networks on Apache CloudStack based clouds     
+cs_network_acl                                         Manages network access control lists (ACL) on Apache Cl...
+cs_network_acl_rule                                    Manages network access control list (ACL) rules on Apac...
+cs_network_offering                                    Manages network offerings on Apache CloudStack based cl...
+cs_physical_network                                    Manages physical networks on Apache CloudStack based cl...
+cs_pod                                                 Manages pods on Apache CloudStack based clouds         
+cs_portforward                                         Manages port forwarding rules on Apache CloudStack base...
+cs_project                                             Manages projects on Apache CloudStack based clouds     
+cs_region                                              Manages regions on Apache CloudStack based clouds      
+cs_resourcelimit                                       Manages resource limits on Apache CloudStack based clou...
+cs_role                                                Manages user roles on Apache CloudStack based clouds   
+cs_role_permission                                     Manages role permissions on Apache CloudStack based clo...
+cs_router                                              Manages routers on Apache CloudStack based clouds      
+cs_securitygroup                                       Manages security groups on Apache CloudStack based clou...
+cs_securitygroup_rule                                  Manages security group rules on Apache CloudStack based...
+cs_service_offering                                    Manages service offerings on Apache CloudStack based cl...
+cs_snapshot_policy                                     Manages volume snapshot policies on Apache CloudStack b...
+cs_sshkeypair                                          Manages SSH keys on Apache CloudStack based clouds     
+cs_staticnat                                           Manages static NATs on Apache CloudStack based clouds  
+cs_storage_pool                                        Manages Primary Storage Pools on Apache CloudStack base...
+cs

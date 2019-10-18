@@ -1,0 +1,20 @@
+- hosts: webservers
+  remote_user: test
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Ensure group "sysadmins" exists
+    group:
+      name: sysadmins
+      gid: 5055
+      state: present
+  - name: ensure user "babinlonston" exists
+    user:
+      name: babinlonston
+      comment: "Managing linuxsysadmins"
+      uid: 5055
+      group: sysadmins
+      groups: backup,healthcheck,ansible
+      shell: /bin/bash
+      password: "123456789"
+      state: present
