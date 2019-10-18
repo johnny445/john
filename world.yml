@@ -1,0 +1,7 @@
+- hosts: all
+  become: yes
+  become_user: test
+  tasks:
+    - name: print the sample  message
+      debug:
+        msg: "hello, good morning" 

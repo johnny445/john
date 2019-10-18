@@ -1,0 +1,75 @@
+---
+- hosts: webservers
+  gather_facts: no
+  connection: ssh
+  vars_prompt:
+  - name: "hosts_prompt"
+    prompt: "Enter the Host or Host group need to run with this Playbook"
+    private: no
+  - name: "disk name"  
+    prompt: "Disk used for creating partition"
+    private: no
+  - name: "pvs_name"
+    prompt: "Disk name after creating with partition"
+    private: no
+  - name: vg_name 
+    prompt: Enter VG name to be created
+    private: no
+  - name: lv_name
+    prompt: Enter LV name to be created
+    private: no
+
+  - name: file_system
+    prompt: Type of file system required?
+    private: no
+  - name: mount_point
+    prompt: Where need to mount?
+    private: no
+
+  tasks:
+  - name: Create Partition for {{ mount_point }} file system
+  remote_user: test
+  become: yes
+  become_method: sudo
+    shell: 
+         /bin/echo -e "n\np\n1\n\n\nt\n8e\nw" | sudo fdisk "{{ disk_name }}"
+
+  - name: Create VG for vg_u01
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+    lvg:
+    vg: "{{ vg_name }}"
+    pvs: "{{ pvs_name }}"
+    pesize: 8
+
+  - name: Create LVM lv_u01 for "{{ mount_point }}" file system.
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+    lvol:
+    vg: "{{ vg_name }}"
+    lv: "{{ lv_name }}"
+    size: 100%FREE 
+
+  - name: Create the file system on newly created Logical volume for "{{ mount_point }}"
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+    filesystem:
+    fstype: "{{ file_system }}" 
+    dev: "/dev/mapper/{{ vg_name }}-{{ lv_name }}"
+
+  - name: Mount the created filesystem ## This is to create the FSTAB entry and mount the
+           Filesystem.
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+    mount:
+    path: "{{ mount_point }}" ## Mount point where to mount the FS.
+    src: "/dev/mapper/{{ vg_name }}-{{ lv_name }}" ## Full related path of device mapper
+             to be mounted under mount point.
+
+    fstype: "{{ file_system }}" ## Filesystem type
+    opts: rw,noatime,noexec,nodev,nosuid ## Mount options
+    state: mounted

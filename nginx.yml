@@ -1,0 +1,14 @@
+- hosts:  all
+  become: yes
+  become_user: test
+  tasks:
+    - name: Install Web Server
+      package:
+        name: nginx
+        state: installed
+
+    - name: Start Web Server
+      service:
+        name: nginx
+        state: started
+        enabled: yes

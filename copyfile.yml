@@ -1,0 +1,7 @@
+- hosts: web
+  become: yes
+  tasks: 
+  - name: copy files for different account
+    copy: 
+      src: /etc/ansible/playbooks/nginx.yml
+      dest: /root/ 

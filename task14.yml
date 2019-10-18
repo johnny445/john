@@ -1,0 +1,16 @@
+- hosts: webservers
+  remote_user: test
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Adding Oracle Kernel Parameters
+    lineinfile:
+      owner: root
+      group: root
+      dest: /etc/sysctl.d/99-sysctl.conf
+      line: '{{ item }}'
+      with_items:
+        - 'kernel.sem = 250 32000 100 128'
+        - 'kernel.shmall = 2097152'
+        - 'kernel.shmmax = 4294967295'
+        - 'kernel.shmmni = 4096'

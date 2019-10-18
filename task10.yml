@@ -1,0 +1,12 @@
+- hosts: webservers
+  remote_user: test
+  become: yes
+  become_method: sudo
+  tasks: 
+  - name: Touch a file under ansible users home directory
+    file:
+      path: /etc/ansible/some.txt
+      state: touch
+      owner: ansbile
+      group: ansible
+      mode: 0644

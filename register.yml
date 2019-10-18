@@ -1,0 +1,10 @@
+- hosts: all
+  become: yes
+  tasks:
+  - name: Run some command
+    shell: history 
+    register: in
+ 
+  - name: Print in  Variable
+    debug:
+      msg: "{{in}}"

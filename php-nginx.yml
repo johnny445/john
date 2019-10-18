@@ -1,0 +1,16 @@
+- hosts: all
+  become: yes
+  tasks:
+  - name: install nginx server
+    yum:
+      name: nginx
+      state: installed
+  - name: start nginx service
+    service: 
+      name: nginx
+      state: started
+  - name: install php server
+    yum:
+      name: php
+      state: installed
+  

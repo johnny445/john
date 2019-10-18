@@ -1,0 +1,103 @@
+- hosts: all
+  become: yes
+  tasks:
+  - name: install nginx server
+    yum:
+      name: nginx
+      state: present
+  - name: start nginx server
+    service: 
+      name: nginx
+      state: started
+    ignore_errors: yes
+  - name: create a directory in variable folder
+    file: 
+      path: /var/www/john
+      state: directory
+  - name: create index file  
+    file:
+      path: /var/www/john/index.html
+      state: touch
+  - name: add content to this file
+    blockinfile:
+      src: index.html
+      path: /var/www/john/index.html
+      block: |
+           hello good morning
+  - name: create a directory in variable folder
+    file:
+      path: /var/www/demo
+      state: directory
+  - name: create index file
+    file:
+      path: /var/www/demo/index.html
+      state: touch
+  - name: add content to this file
+    blockinfile:
+      src: index.html
+      path: /var/www/demo/index.html
+      block: |
+           hello good evening this is demo file
+  - name: create conf file
+    file: 
+      path: /etc/nginx/conf.d/web.conf
+      state: touch
+  - name: add content of conf file
+    blockinfile:
+      src: web.conf
+      path: /etc/nginx/conf.d/web.conf
+      block: |
+            server {
+              listen 81;
+              location / {
+              root /var/www/john; 
+             }
+             }
+  - name: create conf file
+    file: 
+      path: /etc/nginx/conf.d/demo.conf
+      state: touch
+  - name: add content demo conf file
+    blockinfile:
+      src: demo.conf
+      path: /etc/nginx/conf.d/demo.conf
+      block: |
+          server {
+              listen 82;
+              location / {
+              root /var/www/demo;
+             }
+             }
+  - name: create conf file for load balancing
+    file:
+      path: /etc/nginx/conf.d/loadbalancing.conf
+      state: touch
+  - name: add content demo conf file
+    blockinfile:
+      src: loadbalancing.conf
+      path: /etc/nginx/conf.d/loadbalancing.conf
+      block: |
+              upstream backend {
+                  server localhost:81;
+                  server localhost:82;
+                }
+                 server {
+                listen 8080; 
+
+                 location / {
+                proxy_pass http://backend;
+                }
+                }
+  - name: copy nginx configuration for wordpress
+    template: src=default.conf dest=/etc/nginx/conf.d/default.conf
+    ignore_errors: yes
+    notify: restart nginx
+  handlers:
+  - name: restart nginx
+    service:
+      name: nginx
+      state: restarted
+      enabled: yes
+  
+     
+    
