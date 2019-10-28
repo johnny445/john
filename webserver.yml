@@ -88,16 +88,11 @@
                 proxy_pass http://backend;
                 }
                 }
-  - name: copy nginx configuration for wordpress
-    template: src=default.conf dest=/etc/nginx/conf.d/default.conf
-    ignore_errors: yes
-    notify: restart nginx
-  handlers:
   - name: restart nginx
     service:
       name: nginx
       state: restarted
-      enabled: yes
+      
   
      
     
