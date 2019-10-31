@@ -1,0 +1,45 @@
+---
+  - hosts: all
+    become: yes
+    gather_facts: no
+    tasks:
+      - name: install yum utils
+        yum:
+          name: yum-utils
+          state: installed
+      - name: Install device-mapper-persistent-data
+        yum:
+          name: device-mapper-persistent-data
+          state: installed
+      - name: install lvm2
+        yum:
+          name: lvm2
+          state: installed
+      - name: add docker repo
+        get_url:
+          url: https://download.docker.com/linux/centos/docker-ce.repo 
+          validate_certs: no
+          dest: /etc/yum.repos.d/docer-ce.repo
+          force: yes
+        register: downloaded_file
+      - name: Enable Docker Edge repo
+        ini_file:
+          dest: /etc/yum.repos.d/docer-ce.repo
+          section: 'docker-ce-edge'
+          option: enabled
+          value: 0
+      - name: Enable Docker Test repo
+        ini_file:
+          dest: /etc/yum.repos.d/docer-ce.repo
+          section: 'docker-ce-test'
+          option: enabled
+          value: 0
+      - name: install Docker
+        package:
+          name: docker
+          state: installed
+      - name: start docker service
+        service:
+          name: docker
+          state: started
+          enabled: yes

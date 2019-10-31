@@ -1,0 +1,23 @@
+- hosts: all
+  become: yes
+  tasks: 
+  - name: install tomcat9 
+    get_url:
+      url:  http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.27/bin/apache-tomcat-9.0.27.tar.gz  
+      dest: /opt
+      mode: '0755'
+  - name: unzip file
+    unarchive:
+      src: /opt/apache-tomcat-9.0.27.tar.gz
+      dest: /opt
+      remote_src: yes
+  - name: rename tomcat9
+    command: mv /opt/apache-tomcat-9.0.27  /opt/tomcat9
+    ignore_errors: yes
+  - name: permissions
+    file:
+      path: /opt/tomcat9/bin/catalina.sh
+      mode: 0777
+  - name: run shell file
+    shell: /opt/tomcat9/bin/startup.sh
+    port: 8080

@@ -1,0 +1,41 @@
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install Java 8 using YUM.
+    package:
+      name: java-1.8.0-openjdk
+      state: latest  
+      become: true
+
+  - name: Correct the alternatives to change default Java version.
+    alternatives:
+      name: java
+      link: /bin/java
+      path: "{{java.ALTERNATIVES}}"
+
+  - name: Download Jenkins repo yum URL for  
+    get_url:
+      url: http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
+      dest: /etc/yum.repos.d/jenkins.repo
+    become: true
+  - name: Import GPG Key
+    rpm_key:
+      state: present
+      key: sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+  - name: Install Jenkins
+    package:
+      name: jenkins
+      state: present
+ 
+  - name: Change Jenkins JAVA options
+    lineinfile: 
+      dest=/etc/sysconfig/jenkins
+      regexp=^JENKINS_JAVA_OPTIONS=
+      line=JENKINS_JAVA_OPTIONS="{{ jenkins.JAVA_OPTIONS }}"
+    become: true
+
+  - name: Start Jenkins service and enable on boot
+    service:
+      name: jenkins
+      state: started
+      enabled: yes
