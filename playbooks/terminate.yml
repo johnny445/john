@@ -1,0 +1,34 @@
+---
+- hosts: webservers
+  gather_facts: false
+  vars:
+    instance_ids:
+     - 'i-02ef8bb751f808059' # Replace these with your EC2 instance id’s
+    region: us-east-2
+    keypair_name: johnson
+    securitygroup_name: johnson
+  tasks:
+  - name: Terminate EC2 instance
+    ec2:
+      aws_access_key: AKIAT5BO36KM7354HO2A
+      aws_secret_key: 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
+      instance_ids: '{{instance_ids}}'
+      region: '{{region}}'
+      state: absent
+      wait: true
+
+  - name: Remove EC2 Key
+    ec2_key:
+      aws_access_key: AKIAT5BO36KM7354HO2A
+      aws_secret_key: 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
+      name: '{{keypair_name}}'
+      state: absent
+      region: '{{region}}'
+
+  - name: Remove Security Group
+    ec2_group:
+      aws_access_key: AKIAT5BO36KM7354HO2A
+      aws_secret_key: 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
+      name: '{{securitygroup_name}}'
+      state: absent
+      region: '{{region}}'
