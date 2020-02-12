@@ -10,8 +10,8 @@
   tasks:
   - name: Terminate EC2 instance
     ec2:
-      aws_access_key: AKIAT5BO36KM7354HO2A
-      aws_secret_key: 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
+      aws_access_key: <aws-access-key>
+      aws_secret_key: <secret-access-key>
       instance_ids: '{{instance_ids}}'
       region: '{{region}}'
       state: absent
@@ -19,16 +19,16 @@
 
   - name: Remove EC2 Key
     ec2_key:
-      aws_access_key: AKIAT5BO36KM7354HO2A
-      aws_secret_key: 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
+      aws_access_key: <aws-access-key>
+      aws_secret_key: <secret-access-key>
       name: '{{keypair_name}}'
       state: absent
       region: '{{region}}'
 
   - name: Remove Security Group
     ec2_group:
-      aws_access_key: AKIAT5BO36KM7354HO2A
-      aws_secret_key: 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
+      aws_access_key: <aws-access-key>
+      aws_secret_key: <secret-access-key>
       name: '{{securitygroup_name}}'
       state: absent
       region: '{{region}}'
