@@ -12,10 +12,10 @@
   tasks:
   - name: Create security group
     ec2_group:
-      aws_access_key: AKIAT5BO36KM7354HO2A
-      aws_secret_key: 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
+      aws_access_key: <aws-access-key>
+      aws_secret_key: <secret-access-key>
       name: "johnson"
-      description: "V Niranjan Security Group"
+      description: "johnson Security Group"
       region: "{{ region }}"
       rules:
         - proto: tcp
@@ -25,8 +25,8 @@
 
   - name: Create an EC2 key
     ec2_key:
-      aws_access_key: AKIAT5BO36KM7354HO2A
-      aws_secret_key: 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
+      aws_access_key: <aws-access-key>
+      aws_secret_key: <secret-access-key>
       name: "johnson"
       region: "{{ region }}"
     register: ec2_key
@@ -35,8 +35,8 @@
     when: ec2_key.changed
   - name: Create an ec2 instance
     ec2:
-      aws_access_key: AKIAT5BO36KM7354HO2A
-      aws_secret_key: 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
+      aws_access_key: <aws-access-key>
+      aws_secret_key: <secret-access-key>
       key_name: johnson
       group: johnson # security group name
       instance_type: "{{ instance_type}}"
