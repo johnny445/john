@@ -75,3 +75,6 @@ Instance types in AWS
 4. Accelerated computing
 5. Storage optimized			   
  
+What is Soft Link And Hard Link In Linux?
+A symbolic or soft link is an actual link to the original file, whereas a hard link is a mirror copy of the original file. 
+If you delete the original file, the soft link has no value, because it points to a non-existent file.
