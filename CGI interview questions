@@ -78,3 +78,16 @@ Instance types in AWS
 What is Soft Link And Hard Link In Linux?
 A symbolic or soft link is an actual link to the original file, whereas a hard link is a mirror copy of the original file. 
 If you delete the original file, the soft link has no value, because it points to a non-existent file.
+
+ S3 ENCRYPTION TYPES
+1. Rest encryption (Server Side Encryption (SSE))
+2. Client-side encryption
+3. transit encryption
+
+ GIT Branching strategy
+ 
+ master branch - stable (production code)
+ development branch - pre production code
+ feature branch - 
+ release branch - preperation of new production release
+ hot fix - patch production releases.
