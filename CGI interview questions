@@ -91,3 +91,15 @@ If you delete the original file, the soft link has no value, because it points t
  feature branch - 
  release branch - preperation of new production release
  hot fix - patch production releases.
+
+DEFINE AND EXPLAIN THE THREE BASIC TYPES OF CLOUD SERVICES AND THE AWS PRODUCTS THAT ARE BUILT BASED ON THEM?
+THE THREE BASIC TYPES OF CLOUD SERVICES ARE:
+
+1.Computing
+2.Storage
+3.Networking
+
+Here are some of the AWS products that are built based on the three cloud service types:
+Computing - These include EC2, Elastic Beanstalk, Lambda, Auto-Scaling, and Lightsat.
+Storage - These include S3, Glacier, Elastic Block Storage, Elastic File System.
+Networking - These include VPC, Amazon CloudFront, Route53.
