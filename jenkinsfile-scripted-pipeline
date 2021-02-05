@@ -1,0 +1,20 @@
+node {
+    stage(getcode) {
+       git<url>
+    }
+    stage(build) {
+      def mvnHome = tool name: 'maven', type: 'maven'
+      def mvnCMD = "${mvnHome}/bin/mvn"
+      sh "${mvnCMD} clean build"
+    }
+    stage(docker-build) {
+      sh 'docker build -t johnson445/repo-name .'
+    }
+    stage('Push Docker Image') {
+     ### withCredentials([string(credentialsId: 'Docker_Hub_Pwd', variable: 'Docker_Hub_Pwd')]) {
+        sh "docker login -u johnson445 -p ${Docker_Hub_Pwd}"
+        }
+        sh 'docker push johnson445/repo-name'
+    }
+}
+
