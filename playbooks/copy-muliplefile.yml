@@ -1,0 +1,12 @@
+- hosts: all
+  become_user: root
+  become: true
+  tasks:
+    - name: copy files form src to dest
+      copy:
+        src: "{{ item }}"
+        dest: /root/
+##      loop:
+      with_items:
+         - nginx.yaml
+         - tomcat.yml
