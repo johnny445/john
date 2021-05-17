@@ -1,0 +1,141 @@
+GIT BRANCH: git cherry-pick <commit id>
+GIT CHERRYPICK: It is the act of picking a commit from a branch and applying it to another.
+                It can useful for undoing changes. git cherry-pick <commit id>
+		        If a commit is accidentally made to the wrong branch. you can switch to the 
+				correct branch and cherrypick the commit to where it should belong.
+				Cherry picking is the act of picking a commit from a branch and applying it to another.
+ANSIBLE ROLES: A role directory structure contains directories: defaults, vars, tasks, files, templates, meta, handlers. 
+               Each directory must contain a main.yml file which contains relevant content.
+HANDLERS:      contains handlers which can be invoked by “notify” directives and are associated with service.
+
+JENKINS: Jenkinsfiles, using a domain specific language based on the Groovy programming language, 
+         are persistent files that model delivery pipelines “as code”, containing the complete set of encoded steps 
+		 (steps, nodes, and stages) necessary to define the entire application life-cycle.
+JENKINS (SCRIPTED PIPELINE VS DECLERATIVE PIPELINE): 
+         The key difference between Declarative pipeline and Scripted pipeline would be with respect to their syntaxes and their flexibility.
+         Declarative pipeline is a relatively new feature that supports the pipeline as code concept. 
+		 It makes the pipeline code easier to read and write. 
+		 The scripted pipeline provides huge control over the script and can manipulate the flow of script extensively.
+		 The scripted pipeline is a traditional way of writing the Jenkins pipeline as code. 
+		 Ideally, Scripted pipeline is written in Jenkins file on web UI of Jenkins.
+		 This helps developers to develop advance and complex pipeline as code.
+		 This code is written in a Jenkinsfile which can be checked into a source control management system such as Git. 
+         The declarative pipeline is defined within a block labelled ‘pipeline’ whereas the scripted pipeline is defined within a ‘node’. 		 
+SCRIPTED PIPELINE:
+node {
+    stage('Build') {
+       echo 'Building..'
+        }
+    stage('Test') {
+       echo 'Testing..'
+        }
+    stage('Deploy') {
+       echo 'Deploying....'
+        }
+}
+DECLERATIVE PIPELINE:
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}		
+DOCKER CGROUPS : (Control groups)CGROUPS INVOLVE RESOURCE METERING AND LIMITING:
+                   MEMORY
+                   CPU
+                   BLOCK I/O
+                   NETWORK
+SELINUX:   Security-Enhanced Linux (SELinux) is a security architecture for Linux® systems that 
+           allows administrators to have more control over who can access the system. 
+           SELinux defines access controls for the applications, processes, and files on a system. 
+           It uses security policies, which are a set of rules that tell SELinux what can or can’t be accessed, 
+	       to enforce the access allowed by a policy. 
+AUTO SCALING: VERTICAL SCALING means that you scale by adding more power (CPU, RAM) to an existing machine. 
+               AWS provides instances up to 488 GB of RAM or 128 virtual cores.
+S3 LIFE CYCLE : An S3 Lifecycle configuration is a set of rules that define actions that Amazon S3 applies to a group of objects. ... 
+                For example, you might choose to transition objects to the S3 Standard-IA storage class 30 days after you created them, 
+			    or archive objects to the S3 Glacier storage class one year after creating them. 
+                Lifecycle rules to define actions that you want Amazon S3 to take during an object's lifetime 
+                (for example, transition objects to another storage class, archive them, or delete them after a specified period of time).
+
+TERRAFORM SCRIPT: provider "aws" {
+                       region = "eu-central-1"
+                  } 
+                  resource "aws_instance" "example" {
+                       ami = "ami-13b8337c"
+                       instance_type = "t2.micro"
+				       key = "mykey"
+                  }
+                
+GROOVY SCRIPT: (While loop) 
+               class Example {
+                 static void main(String[] args) {
+                   int count = 0;
+		
+                 while(count<5) {
+                   println(count);
+                   count++;
+                 }
+              }
+           }  
+SHELL SCRIPT: (For print ip of a ifconfig command)
+               host `hostname` | awk '{print $NF}' 
+			   (or)
+               #!/bin/sh
+ 
+               serverip=`/sbin/ifconfig eth0 | grep "inet" | awk '{print $2}' | awk 'NR==1' | cut -d':' -f2`
+
+               echo $serverip
+			   
+Instance types in AWS:
+1. General purpose
+2. Computing optimized 
+3. Memory optimized
+4. Accelerated computing
+5. Storage optimized		
+
+AUTO SCALING:
+
+VERTICAL SCALING means that you scale by adding more power (CPU, RAM) to an existing machine. 
+AWS provides instances up to 488 GB of RAM or 128 virtual cores.
+
+HORIZONTAL SCALING essentially involves adding machines in the pool of existing resources. 
+
+When users grow up to 1000 or more, vertical scaling can’t handle requests and horizontal scaling is required. 
+Horizontal scalability can be achieved with the help of clustering, distributed file system, and load balancing.
+
+What is Soft Link And Hard Link In Linux?
+
+A symbolic or soft link is an actual link to the original file, whereas a hard link is a mirror copy of the original file. 
+If you delete the original file, the soft link has no value, because it points to a non-existent file.	   
+
+What is the ELK Stack?: 
+The ELK Stack is a collection of three open-source products — Elasticsearch, Logstash, and Kibana. 
+ELK stack provides centralized logging in order to identify problems with servers or applications. 
+It allows you to search all the logs in a single place. It also helps to find issues in multiple servers by 
+connecting logs during a specific time frame.
+E stands for ElasticSearch: used for storing logs.
+L stands for LogStash : used for both shipping as well as processing and storing logs.
+K stands for Kibana: is a visualization tool (a web interface) which is hosted through Nginx or Apache.
+ELK Stack is designed to allow users to take data from any source, in any format, and to search, analyze, 
+and visualize that data in real time.
+
+Logs: Server logs that need to be analyzed are identified.
+Logstash: Collect logs and events data. It even parses and transforms data.
+ElasticSearch: The transformed data from Logstash is Store, Search, and indexed.
+Kibana: Kibana uses Elasticsearch DB to Explore, Visualize, and Share.

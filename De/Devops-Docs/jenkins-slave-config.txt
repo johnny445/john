@@ -1,0 +1,43 @@
+JENKINS MASTER & SLAVE CONFIGURATION
+1.Login using your credentials jenkins server and click on Manage Jenkins option.
+2.Then click on the option Manage Nodes.
+3.Click on the option New Node in the left menu.
+4.Provide a name for your slave node. For this example, we have named our slave machine as Slave1. Check the option Permanent Agent, and click on OK.
+5.After Clicking OK, following configuration page will appear for machine Slave1.
+Name : Name of the Slave which should be unique.
+Description : Optional , Description for this slave, but as I said earlier, it would be really helpful for other team members
+of executors : The maximum number of concurrent builds that Jenkins may perform on this agent.
+Remote root directory : An agent needs to have a directory dedicated to Jenkins. Specify the path to this directory on the agent. 
+It is best to use an absolute path, such as /var/jenkins/node1
+Labels : Labels (or tags) are used to group multiple agents into one logical group.Multiple labels must be separated by a space.
+Usage : Controls how Jenkins schedules builds on this node. Utilize this node as much as possible.
+Launch method : It Controls how Jenkins starts this agent.
+Launch agent via Java Web Start:It allows slave to be launched using Java Web Start.
+Launch agent via execution of command on the master: It starts slave by having Jenkins execute a command from the master.
+Launch slave agents via SSH: It starts a slave by sending commands over a secure SSH connection.
+Host Key Verification Strategy : Controls how Jenkins verifies the SSH key presented by the remote host whilst connecting.
+Known Host file verification strategy : Checks the known_hosts file (~/.ssh/known_hosts) for the user Jenkins is executing under, 
+to see if an entry exists that matches the current connection.
+Mannually provided key verification strategy : Checks the key provided by the remote host matches the key set by the user who configured this connection.
+Mannually trusted key verification strategy : Require a user with Computer.CONFIGURE permission to authorise the key presented during the first connection 
+to this host before the connection will be allowed to be established.
+Non Verifying verification strategy : Does not perform any verification of the SSH key presented by the remote host, allowing all connections regardless 
+of the key they present. Its not advisable to select as it may open the path for attackers.
+Let Jenkins control this Windows slave as a Windows service: It starts a Windows slave by a remote management facility built into Windows. Suitable for 
+managing Windows slaves. Slaves need to be IP reachable from the master.
+Availability : Controls when Jenkins starts and stops this agent.
+Keep this slave on-line as much as possible:This one is the default and normal setting.In this mode, Jenkins tries to keep the slave on-line as much as possible.
+Take this slave on-line when in demand and off-line when idle : In this mode, if Jenkins can launch the slave without user assistance, it will periodically 
+attempt to launch the slave while there are unexecuted jobs else the slave will be taken off-line by Jenkins.
+You can also define the NODE PROPERTIES, like environment variables, such as PATH, JAVA_HOME, etc and TOOLS LOCATIONS such as, ANT, GIT, etc. 
+Once you are done click on SAVE and that’s it. Your new Jenkins Slave is up and running and ready to take the builds.
+Open the Project and click on Configure.
+Find the check-box in General section “Restrict where this project can be run” and click on it
+Just type the Label name of your slave, in this case its “slave1”
+
+Assuming you have Java and Maven installed on your slave:
+1.Go to Manage Jenkins -> Manage Nodes
+2.Click configure icon on the node you wish to configure
+3.Scroll down to 'Node Properties' and tick the 'Tool Locations' checkbox
+4.Fill in the options for Java and Maven.
+It should now work (even if you have configured a Maven installation on the master).

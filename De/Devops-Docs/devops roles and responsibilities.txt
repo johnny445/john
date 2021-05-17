@@ -1,0 +1,36 @@
+DAY TO DAY ACTIVITIES OF DEVOPS ENGINEER
+
+1.DevOps engineer to make sure that CI/CD pipeline is interact and fixing any issue or failure with it is the #1 priority for the day.
+They often need to spend time on troubleshooting, analysing and providing fixes to issues.
+
+2. INFRASTRUCTURE MANAGEMENT – DevOps engineer are also responsible for maintaining and managing the infrastructure required for CI/CD pipeline 
+and making sure that its up and running and being used optimally is also part of their daily schedule. Ex. Working on Backup, High Availability,
+New Platform setup etc.
+
+3. Devops engineer is responsible for build and release process. 
+ Also managing the user access on resources.
+ Managing the various branches of gate. Gate is basically in the continuous development phase.
+ Also responsible for the automation of tasks, server support and application support.
+ There is not any backup then we have to create a backup policy.
+ 
+Architecture designing like create VPC and it regarding parameter such as SG( security group), IGW( Internet Gateway), Route table.
+Bucket creation and managing their permissions.
+Setting cloudwatch monitoring.
+
+git is version control tool
+maven is build automation and project management tool
+jenkins is ci/cd tool
+ansible is configuration management and deployment tool
+docker is containerization tool
+tomcat is application server
+apache is web server
+nginx is web server and proxy,reverse proxy,load balancing tool
+nagios is monitoring tool
+sonarqube is code quality and static analysis tool
+nexus is artifactory repository tool
+kubernetes is container orchestration tool
+
+What is Proxy and Reverse Proxy?:
+A proxy server is a go-between or intermediary server that forwards requests for content from multiple 
+clients to different servers across the Internet. ... A reverse proxy provides an additional level of 
+abstraction and control to ensure the smooth flow of network traffic between clients and servers.

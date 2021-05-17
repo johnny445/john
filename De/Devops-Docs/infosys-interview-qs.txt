@@ -1,0 +1,40 @@
+docker architecture
+Docker file CMD vs ENTRYPOINT
+docker logs
+docker deamon
+docker custom image: docker build -t -f path of the file:tag
+docker system prune command: to delete multiple images at a single command
+docker logs command: docker logs <containerName>
+kubernetes architecture:
+kubernetes nodeport,clusterIP: 
+clusterIP: with in the cluster access the applications
+Nodeport: to access external traffic of the cluster (outside of the cluster)
+kubernetes deployments types: 
+1.canary
+2.ramped
+3.a/b testing
+4.recreate
+5.blue/green deployments
+
+kubernetes services:
+clusterIP
+Nodeport
+LoadBalancer
+External Name Creation service
+
+kubernetes pods communication
+ansible roles: 
+ansible modules: ping,copy,template,user,group,mail,package,service,firewalld,file,lineinfile,unarchive,command,shell,Mount,Git.
+ansible inventory: 
+git stash: The "git stash" command can help you to(temporarily but safely)store your uncommitted local changes 
+- and leave you with a clean working copy.
+git status: git log command
+git branching strategy: 
+jenkins jobs
+server troubleshoot
+jenkins logs: /var/log/jenkins/jenkins.log
+jenkins scripted pipeline vs declerative pipeline
+jenkins pipeline code stages
+jenkins plugins: Deploy war/ear container,sonar scanner,maven integration,git,github,nexus atrifactory repository,docker,
+ansible,checkstyle,s3 publisher.
+jenkins pipeline job faild in second stage and restart it then it start from first stage.

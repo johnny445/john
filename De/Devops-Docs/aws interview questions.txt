@@ -1,0 +1,118 @@
+1.DEFINE AND EXPLAIN THE THREE BASIC TYPES OF CLOUD SERVICES AND THE AWS PRODUCTS THAT ARE BUILT BASED ON THEM?
+THE THREE BASIC TYPES OF CLOUD SERVICES ARE:
+
+1.COMPUTING ---> There are three main service models of cloud computing – 
+                 Infrastructure as a Service (IaaS), 
+				 Platform as a Service (PaaS) and 
+				 Software as a Service (SaaS).
+2.STORAGE    
+3.NETWORKING
+
+IaaS (Infrastructure as Service):
+
+This is the most common service model of cloud computing as it offers the fundamental infrastructure of virtual servers, 
+network, operating systems and data storage drives. It allows for the flexibility, reliability and scalability that 
+many businesses seek with the cloud, and removes the need for hardware in the office. This makes it ideal for small and 
+medium sized organisations looking for a cost-effective IT solution to support business growth. 
+IaaS is a fully outsourced pay-for-use service and is available as a public, private or hybrid infrastructure.
+
+PaaS (Platform-as-a-Service): 
+
+This is where cloud computing providers deploy the infrastructure and software framework, but businesses can develop 
+and run their own applications. Web applications can be created quickly and easily via PaaS, and the service is flexible 
+and robust enough to support them. PaaS solutions are scalable and ideal for business environments where multiple developers 
+are working on a single project. It is also handy for situations where an existing data source (such as CRM tool) needs to be leveraged.
+
+SaaS (Software as a Service):
+
+This cloud computing solution involves the deployment of software over the internet to various businesses who pay via subscription or 
+a pay-per-use model. It is a valuable tool for CRM and for applications that need a lot of web or mobile access – 
+such as mobile sales management software. SaaS is managed from a central location so businesses 
+don’t have to worry about maintaining it themselves, and is ideal for short-term projects.
+
+HERE ARE SOME OF THE AWS PRODUCTS THAT ARE BUILT BASED ON THE THREE CLOUD SERVICE TYPES:
+
+COMPUTING - These include ec2, elastic beanstalk, lambda, auto-scaling, and lightsat.
+STORAGE - These include S3, Glacier, Elastic block storage (EBS), Elastic file system (EFS).
+NETWORKING - These include VPC, Amazon cloudfront, Route53.
+
+2.what is auto-scaling?:
+	
+Auto-scaling is a function that allows you to provision and launch new instances whenever there is a demand. 
+it allows you to automatically increase or decrease resource capacity in relation to the demand.
+
+3.what is geo-targeting in cloudfront?:
+
+Geo-targeting is a concept where businesses can show personalized content to their audience based on their geographic location without 
+changing the url. this helps you create customized content for the audience of a specific geographical area, keeping their needs in the forefront.
+
+4. CAN YOU HOST DYNAMIC WEBSITES ON S3?. WHAT ABOUT STATIC WEBSITES?:
+
+you can use s3 to host static websites such as . html websites, dynamic websites cannot be hosted on s3."
+
+WHAT IS CONTINUOUS INTEGRATION?:
+
+IN CONTINUOUS INTEGRATION after a code commit, the software is built and tested immediately. 
+In a large project with many developers, commits are made many times during a day. with each commit code is built and tested. 
+if the test is passed, build is tested for deployment. if deployment is a success, the code is pushed to production. 
+this commit, build, test, and deploy is a continuous process and hence the name continuous integration/deployment.
+
+BOTH ENTRYPOINT AND CMD allow you to specify the startup command for an image.
+how to use entrypoint or cmd to specify your image's default executable. however, 
+there are some cases where it makes sense to use entrypoint and cmd together.
+What is the difference between CMD and ENTRYPOINT? You cannot override the 
+ENTRYPOINT instruction by adding command-line parameters to the docker run command.
+
+GIT:
+Git is the most commonly used version control system. Git tracks the changes you make to files, 
+so you have a record of what has been done, and you can revert to specific versions should you ever need to. 
+Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source.
+
+DOCKERFILE:
+
+ADD: copies the files from a source on the host into the container’s own filesystem at the set destination.
+COPY: same as ADD copies the files from a source on the host into the container’s own filesystem at the set destination.
+CMD :can be used for executing a specific command within the container.
+CMD :is an instruction that is best to use if you need a default command which users can easily override. 
+If a Dockerfile has multiple CMDs, it only applies the instructions from the last one.
+ENTRYPOINT: sets a default application to be used every time a container is created with the image.
+            ENTRYPOINT is preferred when you want to define a container with a specific executable.
+ENV: sets environment variables.
+EXPOSE: associates a specific port to enable networking between the container and the outside world.
+FROM: defines the base image used to start the build process.
+MAINTAINER: defines a full name and email address of the image creator.
+RUN: is the central executing directive for Dockerfiles.
+USER: sets the UID (or username) which is to run the container.
+VOLUME: is used to enable access from the container to a directory on the host machine.
+WORKDIR: sets the path where the command, defined with CMD, is to be executed.
+LABEL: allows you to add a label to your docker image.
+
+Difference between CMD and RUN:
+RUN and CMD are both Dockerfile instructions. RUN lets you execute commands inside of your Docker image. 
+These commands get executed once at build time and get written into your Docker image as a new layer. ... 
+CMD lets you define a default command to run when your container starts.
+
+Difference between ADD and COPY are:
+ADD can also copy files from a URL. It can download an external file and copy it to the wanted destination.
+COPY can be used only for locally stored files. Therefore, you cannot use it with URLs to copy external files to your container.
+
+Source command for update environmental variables:
+source ~/.bash_profile
+source /etc/profile
+
+yum list available java\*  ---> to show multiple java versions and install java. 
+
+alternatives --config java  ---> to select which java version is used to your application.
+
+chmod -R 755 /opt/lampp/htdocs ---> if you want to change permissions of all files and directories at once.
+
+HOW TO FREE UP PORT USE COMMAND:
+netstat -lnp | grep 1025(port)
+kill 1025 --> kill process
+vi editor to replace string:
+:%s/old-one/new-one/g
+Find and kill a process:
+ps -eaf | grep /usr/sbin/httpd(process name) | grep -v grep | awk '{print $2}' | xargs kill
+
+To run script background and do other work:
+nohup sh custom-script.sh > custom-out.log 

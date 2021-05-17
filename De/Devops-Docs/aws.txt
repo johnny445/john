@@ -1,0 +1,111 @@
+ S3 ENCRYPTION TYPES:
+1. Rest encryption (Server Side Encryption (SSE))
+2. Client-side encryption
+3. transit encryption
+
+Status checks for your instances:
+1.System status checks
+System status checks monitor the AWS systems on which your instance runs. 
+These checks detect underlying problems with your instance that require AWS involvement to repair. 
+When a system status check fails, you can choose to wait for AWS to fix the issue, or you can resolve it yourself. 
+For instances backed by Amazon EBS, you can stop and start the instance yourself, which in most cases results in the 
+instance being migrated to a new host. For instances backed by instance store, you can terminate and replace the instance.
+The following are examples of problems that can cause system status checks to fail:
+Loss of network connectivity
+Loss of system power
+Software issues on the physical host
+Hardware issues on the physical host that impact network reachability
+2.Instance status checks
+Instance status checks monitor the software and network configuration of your individual instance. 
+Amazon EC2 checks the health of the instance by sending an address resolution protocol (ARP) request to the network interface (NIC). 
+These checks detect problems that require your involvement to repair. When an instance status check fails, you typically must 
+address the problem yourself (for example, by rebooting the instance or by making instance configuration changes).
+The following are examples of problems that can cause instance status checks to fail:
+Failed system status checks
+Incorrect networking or startup configuration
+Exhausted memory
+Corrupted file system
+
+Incompatible kernel
+•	SIMPLE ROUTING POLICY: Use for a single resource that perfoms a given function for your domain, 
+    for example, a web server that serves content for the example.com website.
+•	FAILOVER ROUTING POLICY: Use when you want to configure active-passive failover.
+•	GEOLOCATION ROUTING POLICY: Use when you want to route traffic based on the location of your users.
+•	GEOPROXIMITY ROUTING POLICY: Use when you want to route traffic based on the location of your resources and, 
+    optionally, shift traffic from resources in one location to resources in another.
+•	LATENCY ROUTING POLICY: Use when you have resources in multiple AWS Regions and you want 
+    to route traffic to the region that provides the best latency.
+•	MULTIVALUE ANSWER ROUTING POLICY: Use when you want Route53 to respond to DNS queries 
+    with up to eight healthy records selected at random.
+•	WEIGHTED ROUTING POLICY: Use to route traffic to miultiple resources in proportions that you specify.
+
+
+GIT Branching strategy:
+master branch - stable (production code)
+development branch - pre production code
+feature branch - 
+release branch - preperation of new production release
+hot fix - patch production releases
+ 
+ DOCKER VERSION: -19.03.3 (2019-10-07)
+ JENKINS VERSION: - 3.1.0 (2019-01-21)
+ ANSIBLE VERSION: - 2.5 (2.5.1 TO 2.5.15)
+ GIT VERSION: - 2.16	2018-01-17	2.16.6	2019-12-07
+ MAVEN VERSION: - 3.6.2 (2019-08-27)
+ APACHE TOMCAT VERSION: - 8.5.61 (8.5.X)
+ APACHE (HTTPD): - 2.4.39 (APRIL 2019)
+ NGINX VERSION: - 1.15.8 (2018-12-25)
+ SONARQUBE VERSION: - 7.9.x LTS (July 2019)
+ NEXUS VERSION: - 3.15.2
+ NAGIOS VERSION: - 4.4.3 – (2019-01-15)
+ KUBERNETES: - 1.18 - 25 March 2020
+ TERRAFORM: - 0.14.9
+NGINX: - It accelerates content and application delivery, improves security, 
+facilitates availability and scalability for the busiest web sites on the Internet.
+The NGINX source code is written in the C programming language.
+Declarative pipeline:
+The Declarative pipeline is a new feature that is added to create the pipeline. 
+This is basically written in a Jenkinsfile which can be stored into a source code management system such as Git. 
+Declarative pipelines is an ideal solution for the simple continuous delivery pipeline as it has very limited and pre-defined structure.
+
+Scripted pipeline:
+The scripted pipeline is a traditional way of writing the Jenkins pipeline as code. 
+Ideally, a Scripted pipeline is written in the Jenkins file on the web UI of Jenkins. 
+Unlike the Declarative pipeline, the scripted pipeline strictly uses groovy based syntax. 
+Since this, The scripted pipeline provides huge control over the script and can manipulate the flow of the script extensively. 
+This helps developers to develop advance and complex pipelines as code.
+
+Difference between freestyle and maven project in jenkins:
+A Free-Style project is a project that can incorporate almost any type of build. While a maven project you can only build maven projects, 
+the Free-Style project is the more "generic" form of a project.
+Mysql:
+
+mysql -h <end point> -P 3306 -u username -p password
+
+mysql -h mysql2018.cni7sprher5s.us-east-2.rds.amazonaws.com -P 3306 -u mysql2018 -p mysql2018
+
+CREATE TABLE IF NOT EXISTS books (
+    book_id INT AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255),
+    publish_date DATE,
+    description TEXT,
+    PRIMARY KEY (book_id)
+) ENGINE=INNODB;
+
+What is the maximum amount of IAM users allowable per account?:
+5000 per AWS account
+how many s3 buckets per account?:
+you can create up to 100 buckets in each of your AWS accounts.
+What is the maximum storage limit per S3 buckets?:
+Individual Amazon S3 objects can range in size from a minimum of 0 bytes to a maximum of 5 terabytes(5TB).
+The largest object that can be uploaded in a single PUT is 5 gigabytes. For objects larger than 100 megabytes, 
+customers should consider using the Multipart Upload capability. There is no limit on objects per bucket.
+Can S3 host dynamic website?:
+You can use Amazon S3 to host a static website. ... By contrast, a dynamic website relies on server-side processing, 
+including server-side scripts such as PHP, JSP, or ASP.NET. Amazon S3 does not support server-side scripting, 
+but AWS has other resources for hosting dynamic websites.
+What is the port 53?:
+DNS uses Port 53 which is nearly always open on systems, firewalls, and clients to transmit DNS queries. 
+Rather than the more familiar Transmission Control Protocol (TCP) these queries use User Datagram Protocol (UDP) 
+because of its low-latency, bandwidth and resource usage compared TCP-equivalent queries.

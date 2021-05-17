@@ -1,0 +1,12 @@
+UST Global Interview Questions
+1.maven life cycle
+2.maven surefire plugin
+3.jenkins plugins install and set up
+4.nexus artifactory plugin setup
+5.jenkins master slave configuration
+6.docker in kubernetes
+7.Explain docker and kubernetes
+8.kubernetes agents configuration
+9.kubernetes deployment files
+10.recent challenges in your job
+11.autoscaling in aws
